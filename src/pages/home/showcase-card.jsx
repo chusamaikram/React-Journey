@@ -3,7 +3,7 @@ export default function ShowcaseCard({ img, title, desc }) {
     return (
         <>
             <div className="w-full flex flex-col items-start justify-center gap-8">
-                <img className="max-w-full h-full rounded-6" src={img} alt={title}
+                <img className="max-w-full h-full rounded-6" src={img} alt={title} loading="lazy"
                     width={600}
                     height={685}
                 />
