@@ -1,5 +1,5 @@
 import gradientbg from "../../assets/images/gradient-bg.png"
-import SpinningStar from "../../assets/images/spining-star.GIF"
+import SpinningStar from "../../assets/images/spining-star.gif"
 import Button from "../../components/common/button";
 import FaqSection from "./faq-section";
 import HeroSection from "./hero";
