@@ -166,3 +166,18 @@ export const HalfStar = () => (
         </defs>
     </svg>
 )
+
+export const PlusIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M2.66663 8H13.3333" stroke="#515050" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+
+)
+
+export const MinusIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M8 2.66699V13.3337" stroke="#6D6D6D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M2.66663 8H13.3333" stroke="#6D6D6D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+)
+

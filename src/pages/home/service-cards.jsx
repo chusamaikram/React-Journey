@@ -15,7 +15,7 @@ export default function ServiceCard({ heading, title, path }) {
                         <p className="text-base sm:text-lg leading-[27px] font-[Plus Jakarta Sans] uppercase">{heading}</p>
                         <h3 className="text-[22px] sm:text-[28px] font-bold  font-[Geologica]">{title}</h3>
                     </div>
-                    <Link path={path} className="w-12 h-12 flex items-center justify-center gap-2.5 rounded-full bg-[#2D2D2D] border border-[#2D2D2D] translate-x-[24px] sm:translate-x-[40px] transition-all duration-900 ease-in-out group-hover:translate-x-0 group-hover:bg-white group-hover:text-black">
+                    <Link path={path} className="w-12 h-12 flex items-center justify-center p-2.5 rounded-full bg-[#2D2D2D] border border-[#2D2D2D] translate-x-[24px] sm:translate-x-[40px] transition-all duration-900 ease-in-out group-hover:translate-x-0 group-hover:bg-white group-hover:text-black">
 
                         <ArrowIcon />
                     </Link>

@@ -18,6 +18,9 @@ import effortless from "../images/effortless-shopping.png"
 import ConnectBryond from "../images/connect-beyond.png"
 import style from "../images/style.png"
 import SmartShipping from "../images/smart-shipping.png"
+import insight1 from "../images/insight1.png"
+import insight2 from "../images/insight2.png"
+import insight3 from "../images/insight3.png"
 
 
 
@@ -42,5 +45,8 @@ export {
         ConnectBryond,
         style,
         SmartShipping,
+        insight1,
+        insight2,
+        insight3,
               
 }
