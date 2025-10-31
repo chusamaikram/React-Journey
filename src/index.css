@@ -35,8 +35,13 @@ body {
 
 @media(max-width:575px) {
   .container {
-    max-width: 375px;
     padding: 0 24px;
+  }
+}
+
+@media(max-width:890px) {
+  .container {
+    padding: 0 40px;
   }
 }
 
@@ -89,4 +94,3 @@ body {
   color: #707070;
   font-size: 13px;
 }
-

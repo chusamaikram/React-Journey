@@ -6,6 +6,7 @@ import Login from "../pages/auth/loginpage";
 import AboutUs from "../pages/about";
 
 
+
 export default function CustomRoutes() {
     return (
         <>

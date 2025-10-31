@@ -112,9 +112,9 @@ export default function HeroSection() {
                                 </ul>
                             </div>
                             <div className="relative  flex flex-col items-center justify-center gap-3 py-12">
-                                <h1 className="w-[330px] sm:w-[978px] text-center font-[Geologica] uppercase font-[800] text-[36px] sm:text-[72px] leading-[50px] sm:leading-[96px]">Creative Intelligence in Every Pixel</h1>
+                                <h1 className="w-[330px] sm:w-[700px] lg:w-[978px] text-center font-[Geologica] uppercase font-[800] text-[36px]  sm:text-[42px] lg:text-[72px]  leading-[50px] sm:leading-[64px] lg:[96px]">Creative Intelligence in Every Pixel</h1>
                                 <p className="text-[20px] text-center capitalize text-[#FFFFFF] font-[Inter]"> We craft <span className="text-[#F3FE00] font-[Plus Jakarta Sans]"> stunning</span> designs for businesses worldwide.</p>
-                                <span className="absolute hidden sm:block origin-right rotate-7 top-[60px] right-[45px] bg-[#F3FE00] py-[6px] px-2 rounded-[8px] text-[#0B0B0B] text-[12px] font-bold uppercase font-[Geologica]"> NO CODE</span>
+                                <span className="absolute hidden lg:block  origin-right rotate-7 top-[60px] right-[45px] bg-[#F3FE00] py-[6px] px-2 rounded-[8px] text-[#0B0B0B] text-[12px] font-bold uppercase font-[Geologica]"> NO CODE</span>
                             </div>
                             <div className="flex items-center justify-center gap-[20px]">
                                 <Button

@@ -1,6 +1,7 @@
 import gradientbg from "../../assets/images/gradient-bg.png"
 import SpinningStar from "../../assets/images/spining-star.gif"
 import Button from "../../components/common/button";
+import ContactUs from "./contact-us";
 import FaqSection from "./faq-section";
 import HeroSection from "./hero";
 import InsightsSection from "./insights";
@@ -42,6 +43,7 @@ export default function Home() {
 
             <FaqSection />
             <InsightsSection />
+            <ContactUs />
 
 
 

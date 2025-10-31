@@ -38,7 +38,7 @@ export default function Services() {
                     <div className='pt-0 sm:pt-[80px]'>
                         <Heading title="WE are great at" secHeading="OUR SERVICES" desc="Designs with Exceptional User Experiences" />
                     </div>
-                    <div className="card-wrapper  grid grid-cols-1 sm:grid-cols-2 gap-x-8 mt-[64px]">
+                    <div className="card-wrapper  grid grid-cols-1 lg:grid-cols-2 gap-x-8 mt-[64px]">
                         {ServiceCards.map((item) => (
                             <ServiceCard key={item.id} {...item} />
                         ))}

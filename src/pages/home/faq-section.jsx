@@ -67,7 +67,7 @@ export default function FaqSection() {
         <>
             <section className="hidden sm:block py-[80px]">
                 <div className="container">
-                    <div className="flex items-start justify-between gap-12 ">
+                    <div className="flex flex-col lg:flex-row items-start justify-between gap-12 ">
                         <div className="max-w-[409px] flex flex-col items-start gap-8 font-[Geologica] ">
                             <span className="text-[#F3FE00] text-sm uppercase">FAQs</span>
                             <div className="flex flex-col items-start gap-3">

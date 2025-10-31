@@ -23,7 +23,7 @@ export default function InsightsSection() {
             path: "#",
         },
         {
-            id: 1,
+            id: 3,
             img: insight3,
             title: "Is your creative character being sacrificed to Algorithm, Inc.?",
             desc: "AI is changing how we work. Here’s why and how we must preserve the human spirit that drives...",
@@ -52,10 +52,10 @@ export default function InsightsSection() {
                         {InsightCards.map(item => (
                             <div key={item.id} className="h-[545px] bg-[#121212] border border-[#2D2D2D] rounded-[16px]  flex flex-col items-center justify-center" >
                                 <div className="h-[227px]">
-                                    <img className="h-full object-cover" src={item.img} alt={item.title} width={392} height={227} />
+                                    <img className="h-full object-contain" src={item.img} alt={item.title} width={392} height={227} />
                                 </div>
 
-                                <div className="p-6 flex flex-col items-start">
+                                <div className="h-full p-6 flex flex-col items-start">
                                     <span className="hidden sm:block text-[12px] font-[Inter] text-white">ZeeFrames</span>
                                     <div className="flex flex-col items-start gap-2 py-5">
                                         <Link className="text-[20px] sm:text-[24px] font-medium font-[Poppins] text-white" to={item.path}> {item.title}</Link>
