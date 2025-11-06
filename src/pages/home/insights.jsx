@@ -34,7 +34,7 @@ export default function InsightsSection() {
     ]
     return (
         <>
-            <section className="py-8 sm:py-[80px]">
+            <section className="above-glow py-8 sm:py-[80px]">
                 <div className="container">
                     <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-4 sm:gap-auto">
                         <div className="max-w-[510px] flex flex-col items-center sm:items-start justify-start gap-4 sm:gap-8">

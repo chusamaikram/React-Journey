@@ -7,9 +7,9 @@ export default function ShowcaseCard({ img, title, desc }) {
                     width={600}
                     height={685}
                 />
-                <div className="flex flex-col items-start gap-2.5 ">
-                    <h3 className="text-[28px] font-semibold font-[Inter Tight]">{title}</h3>
-                    <p className="text-base leading-[25px] font-[Inter Tight]" >{desc}</p>
+                <div className="flex flex-col items-start gap-2.5 font-['Inter_Tight'] ">
+                    <h3 className="text-[28px] font-semibold ">{title}</h3>
+                    <p className="text-base leading-[25px] " >{desc}</p>
                 </div>
             </div>
 

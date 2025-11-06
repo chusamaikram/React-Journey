@@ -33,7 +33,7 @@ export default function Services() {
 
     return (
         <>
-            <section className="py-8 sm:py-[80px]">
+            <section className="above-glow py-8 sm:py-[80px]">
                 <div className="container">
                     <div className='pt-0 sm:pt-[80px]'>
                         <Heading title="WE are great at" secHeading="OUR SERVICES" desc="Designs with Exceptional User Experiences" />

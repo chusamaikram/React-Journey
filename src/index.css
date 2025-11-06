@@ -23,6 +23,11 @@ body {
 
 }
 
+.team-slider {
+  animation: 40s linear infinite scroll;
+
+}
+
 @keyframes scroll {
   0% {
     transform: translate(0)
@@ -37,13 +42,17 @@ body {
   .container {
     padding: 0 24px;
   }
+
+  .header-btn {
+    display: none;
+  }
 }
 
-@media(max-width:890px) {
+/* @media(max-width:890px) {
   .container {
     padding: 0 40px;
   }
-}
+} */
 
 .floating_btn {
   position: fixed;
@@ -94,3 +103,22 @@ body {
   color: #707070;
   font-size: 13px;
 }
+
+.process-cards::before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 100%;
+  left: 29px;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.20) 86.27%, rgba(255, 255, 255, 0.00) 88.15%);
+
+}
+
+/* .home-video {
+  max-height: calc(100dvh - 88px);
+} */
+
+/* .above-glow{
+  position: relative;
+  z-index: 50;
+} */

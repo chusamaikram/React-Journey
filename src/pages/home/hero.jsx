@@ -6,6 +6,7 @@ import { adiqat, cisco, nissan, repurpose, trafilea, walmart, yallamotor } from 
 import Button from "../../components/common/button";
 import mainvideo from "../../assets/videos/mainvideo.mp4"
 import { Bdot, Diamond, FigmaIcon, StarIcon, Wicon, XD } from "../../assets/images/svg";
+import Mainheading from "../../components/common/mainheading";
 
 export default function HeroSection() {
     const Startups = [
@@ -78,6 +79,51 @@ export default function HeroSection() {
             width: "142",
             height: "33"
         },
+        {
+            name: 'walmart',
+            image: walmart,
+            width: "135",
+            height: "33"
+        },
+        {
+            name: 'nissan',
+            image: nissan,
+            width: "142",
+            height: "33"
+        },
+        {
+            name: 'walmart',
+            image: walmart,
+            width: "135",
+            height: "33"
+        },
+        {
+            name: 'nissan',
+            image: nissan,
+            width: "142",
+            height: "33"
+        },
+        {
+            name: 'walmart',
+            image: walmart,
+            width: "135",
+            height: "33"
+        },
+         {
+            name: 'yallamotor',
+            image: yallamotor,
+            width: "152",
+            height: "33"
+        },
+        {
+            name: 'nissan',
+            image: nissan,
+            width: "142",
+            height: "33"
+        },
+       
+      
+       
     ]
 
     return (
@@ -93,7 +139,7 @@ export default function HeroSection() {
                         <StarIcon />
 
                         <div className="absolute z-10 top-0 left-0">
-                            <div className="w-[327px] sm:w-[600px] mt-8 sm:mt-12 mx-auto bg-[#0D0D0C] rounded-[8px] border border-[#303030] flex flex-col sm:flex-row items-start sm:items-center justify-center gap-5 p-2">
+                            <div className="above-glow  w-[327px] sm:w-[600px] mt-8 sm:mt-12 mx-auto bg-[#0D0D0C] rounded-[8px] border border-[#303030] flex flex-col sm:flex-row items-start sm:items-center justify-center gap-5 p-2">
                                 <div className="flex items-center gap-3">
                                     <img src={industrylogo} alt="" />
                                     <p>Trusted by startups to craft $100M+ designs with</p>
@@ -112,11 +158,11 @@ export default function HeroSection() {
                                 </ul>
                             </div>
                             <div className="relative  flex flex-col items-center justify-center gap-3 py-12">
-                                <h1 className="w-[330px] sm:w-[700px] lg:w-[978px] text-center font-[Geologica] uppercase font-[800] text-[36px]  sm:text-[42px] lg:text-[72px]  leading-[50px] sm:leading-[64px] lg:[96px]">Creative Intelligence in Every Pixel</h1>
+                               < Mainheading  text="Creative Intelligence in Every Pixel" />
                                 <p className="text-[20px] text-center capitalize text-[#FFFFFF] font-[Inter]"> We craft <span className="text-[#F3FE00] font-[Plus Jakarta Sans]"> stunning</span> designs for businesses worldwide.</p>
                                 <span className="absolute hidden lg:block  origin-right rotate-7 top-[60px] right-[45px] bg-[#F3FE00] py-[6px] px-2 rounded-[8px] text-[#0B0B0B] text-[12px] font-bold uppercase font-[Geologica]"> NO CODE</span>
                             </div>
-                            <div className="flex items-center justify-center gap-[20px]">
+                            <div className=" above-glow flex items-center justify-center gap-[20px]">
                                 <Button
                                     path="/contact" hovertext={" Let's talk 🤙"} defaulttext={"Schedule Call"}
                                     className="w-[170px] h-[48px] bg-white border border-white text-[#0B0B0B]  font-[Plus Jakarta Sans] leading-none "
@@ -129,10 +175,10 @@ export default function HeroSection() {
                                 />
                             </div>
                             <p className="mt-8 sm:mt-[88px] text-center text-[14px] font-[500] uppercase font-[Plus Jakarta Sans] text-[#E7E7E7]">Trusted by Industry Leaders & Fast-Growing Startups</p>
-                            <div className="py-5 mt-6">
-                                <div className=" slide-track relative py-1 flex items-center justify-between gap-[48px]">
+                            <div className="py-5 mt-6 hidden sm:flex  overflow-hidden">
+                                <div className=" slide-track relative py-1 flex flex-shrink-0  items-center justify-between gap-[48px]">
                                     {companies.map(item => (
-                                        <div key={item.name} className=" h-[33px]">
+                                        <div key={item.name} className=" ">
                                             <img className="w-full h-full"
                                                 src={item.image} alt={item.name}
                                                 width={item.width}
@@ -148,8 +194,8 @@ export default function HeroSection() {
                 </div>
             </section>
 
-            <section className="video-section]">
-                <video className=" object-cover w-full h-auto" src={mainvideo} width={1440} height={766} autoPlay muted loop playsInline preload="auto"></video>
+            <section className=" above-glow relative overflow-hidden">
+                <video className=" home-video object-cover w-full h-auto" src={mainvideo} width={1440} height={766} autoPlay muted loop playsInline preload="auto"></video>
             </section>
         </>
     )

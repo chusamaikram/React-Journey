@@ -46,7 +46,14 @@ export default function Home() {
             <ContactUs />
 
 
-
+            <div className="floating_btn">
+                <a target="_blank" href="https://wa.me/">
+                    <div className="contact_icon">
+                        <i className="fa fa-whatsapp my-float"></i>
+                    </div>
+                </a>
+            </div>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"></link>
 
         </>
     )

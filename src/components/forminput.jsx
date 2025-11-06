@@ -1,8 +1,27 @@
-
-export default function InputField(props) {
+export default function InputField({
+    type = "text",
+    name,
+    placeholder = "",
+    value,
+    touched,
+    onChange,
+    onBlur,
+    error,
+}) {
+    const borderColor =
+        error && touched ? "border-red-500" : "border-[#373737]";
     return (
         <>
-            <input className="w-full px-4 h-[44px]  bg-[#171717] border border-[#373737] focus:border-[#F3FE00] rounded-[8px] text-[#B9B9B9] text-sm font-medium font-['Inter_Tight'] outline-none " type={props.type} name={props.name} placeholder={props.placeholder} />
+            <input
+                className={` w-full px-4 h-[44px] bg-[#171717] border ${borderColor} focus:border-[#F3FE00] rounded-[8px] text-[#B9B9B9] text-sm font-medium font-['Inter_Tight'] outline-none`}
+                type={type}
+                name={name}
+                placeholder={placeholder}
+                value={value}
+                onChange={onChange}
+                onBlur={onBlur}
+            />
+
         </>
-    )
+    );
 }

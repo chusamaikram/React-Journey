@@ -24,6 +24,7 @@ import insight3 from "../images/insight3.png"
 
 
 
+
 export {
         walmart,
         cisco,

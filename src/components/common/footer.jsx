@@ -112,7 +112,7 @@ export default function Footer() {
                         <div className="flex flex-wrap items-start gap-6 sm:gap-[48px]">
                             {FooterLinks.map(item => (
                                 <div id={item.id}
-                                    className="w-[140px] sm:w-[160px] flex flex-col items-start gap-5">
+                                    className="w-[140px] sm:w-[160px] flex flex-col items-start gap-5 font-['Inter_Tight']">
                                     <h2 className="text-base font-semibold leading-[20px] text-[#FFFFFF]">{item.title}</h2>
                                     <ul className="flex flex-col items-start gap-3.5">
                                         {item.links.map((link, i) => (
@@ -133,7 +133,7 @@ export default function Footer() {
                     <div className="grid sm:grid-cols-4 items-start gap-4 p-6 bg-[#1A1A1A]">
                         {Address.map(item => (
                             <div id={item.id}
-                                className="flex flex-col items-start gap-[6px] p-5" >
+                                className="flex flex-col items-start gap-[6px] p-5 font-['Inter_Tight'] " >
                                 <img src={item.img} alt={item.title}
                                     width={32}
                                     height={24}
@@ -147,7 +147,7 @@ export default function Footer() {
 
                     </div>
                     <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-5 justify-between">
-                        <p className="text-[rgba(255, 255, 255, 0.70)] text-xs">© ZeeFrames (Private) Limited. All Rights Reserved.</p>
+                        <p className="text-white/70 text-xs">© ZeeFrames (Private) Limited. All Rights Reserved.</p>
                         <ul className="flex items-center gap-[16px]">
                             {SocialLinks.map(item => (
                                 <li key={item.id}>
@@ -163,14 +163,7 @@ export default function Footer() {
                 </div>
 
             </footer>
-            <div className="floating_btn">
-                <a target="_blank" href="https://wa.me/">
-                    <div className="contact_icon">
-                        <i className="fa fa-whatsapp my-float"></i>
-                    </div>
-                </a>
-            </div>
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"></link>
+            
         </>
     )
 }

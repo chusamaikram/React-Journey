@@ -65,18 +65,18 @@ export default function FaqSection() {
 
     return (
         <>
-            <section className="hidden sm:block py-[80px]">
+            <section className="above-glow  hidden sm:block py-[80px]">
                 <div className="container">
                     <div className="flex flex-col lg:flex-row items-start justify-between gap-12 ">
                         <div className="max-w-[409px] flex flex-col items-start gap-8 font-[Geologica] ">
                             <span className="text-[#F3FE00] text-sm uppercase">FAQs</span>
                             <div className="flex flex-col items-start gap-3">
                                 <h2 className="text-[40px] leading-[40px] font-bold uppercase ">Got Question?</h2>
-                                <p className="text-[#BDBDBD] text-sm leading-[21px] ">We begin with meaningful conversations that drive design decisions.</p>
+                                <p className="text-[#BDBDBD] text-sm leading-[21px] font-['Inter_Tight'] ">We begin with meaningful conversations that drive design decisions.</p>
                             </div>
 
                             <div className="flex items-start justify-between gap-8">
-                                <div className="w-[210px]">
+                                <div className="w-[220px]">
                                     <Button
                                         className="w-full text-black bg-white hover:bg-transparent hover:text-[#F3FE00] border border-white hover:border-[#F3FE00]"
                                         path='#'
@@ -98,7 +98,7 @@ export default function FaqSection() {
                                             ))}
 
                                         </ul>
-                                        <p className="text-sm leading-[21px] text-[#D3D3D3]">Rating 5,20 reviews</p>
+                                        <p className="text-sm leading-[21px] text-[#D3D3D3] font-['Inter_Tight']">Rating 5,20 reviews</p>
 
 
                                     </div>
@@ -106,7 +106,7 @@ export default function FaqSection() {
                                 </Link>
                             </div>
                         </div>
-                        <div className=" w-full flex-grow flex flex-col items-start justify-center gap-4">
+                        <div className=" w-full flex-grow flex flex-col items-start justify-center gap-4 font-['Inter_Tight']">
                             {FaqCards.map((item, index) => (
                                 <div key={index} className={` w-full p-5  bg-[rgba(255, 255, 255, 0.04)] border  transition-all duration-500 ${activeIndex === index ? "border-[#F3FE00]" : "border-[#3C3C3C]"}  rounded-[12px]`}>
                                     <button className=" w-full bg-transparent border-none cursor-pointer flex items-center justify-between" onClick={() => handletogle(index)}>
@@ -118,17 +118,12 @@ export default function FaqSection() {
 
                                         </span>
                                     </button>
-                                    {activeIndex === index &&
-                                        <div
-                                            className={`overflow-hidden mt-2`}>
-                                            <p className="text-base leading-[24px] text-[#E7E7E7] opacity-[0.6]">
-                                                {item.answer}
-                                            </p>
-                                        </div>
-                                    }
-
-
-
+                                    <div
+                                        className={`overflow-hidden mt-2 transition-all duration-500 ${activeIndex === index ? "max-h-[500px]" : "max-h-0"}`}>
+                                        <p className="text-base leading-[24px] text-[#E7E7E7] opacity-[0.6]">
+                                            {item.answer}
+                                        </p>
+                                    </div>
                                 </div>
 
                             ))}
