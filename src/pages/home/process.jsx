@@ -6,7 +6,7 @@ import process3 from "../../assets/images/process-3.webp"
 import process4 from "../../assets/images/process-4.webp"
 import process5 from "../../assets/images/process-5.webp"
 import process6 from "../../assets/images/process-6.webp"
-import { img } from "framer-motion/client";
+
 import { useEffect, useRef, useState } from "react";
 
 export default function ProcessSection() {
@@ -96,31 +96,39 @@ develop excellently. And we care deeply about what we do."
                         />
                     </div>
                     <div className="flex items-start gap-20 relative">
-                        <div className="process-cards  pl-12 w-full max-w-[609px] relative">
-                            <ul className="  flex flex-col items-start gap-25">
+                        <div className="process-cards pl-none sm:pl-12 w-full max-w-[609px] relative">
+                            <ul className="  flex flex-col items-start gap-8 md:gap-25">
                                 {Cards.map((items, index) => (
                                     <li key={items.id}
                                         ref={(el) => (cardRefs.current[index] = el)}
                                         data-id={items.id}
                                     >
+                                        <div className="flex flex-col items-start gap-10">
+
                                         <ProcessCard
                                             id={items.id}
                                             heading={items.heading}
                                             category={items.category}
                                             desc={items.desc}
                                         />
+                                        <div className="overflow-hidden block md:hidden">
+                                            <img className="object-cover w-full h-full rounded-4" src={items.img} alt="thumbnail" width={527} height={506} />
+                                        </div>
+                                        </div>
 
                                     </li>
 
                                 ))}
                             </ul>
                         </div>
-                        <div className="above-glow sticky top-[20vh] h-['fit-content'] ">
-                            <img className="object-contain max-w-full rounded-4" src={activeImage} alt="process visuals" width={527} height={506} />
+                        <div className="hidden md:block above-glow sticky top-[20vh] h-['fit-content'] ">
+                            <img className="object-cover w-full rounded-4" src={activeImage} alt="process visuals" width={527} height={506} />
 
                         </div>
 
                     </div>
+                    
+
                 </div>
 
             </section>

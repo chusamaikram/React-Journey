@@ -23,13 +23,13 @@ export default function CustomRoutes() {
                         <Route path="/insights" element={< Insights />} />
                         <Route path="/insights/insight-details" element={<InsightDetail />} />
                         <Route path="/work" element={<Work />} />
-                        <Route path="/strategy" element={<Strategy />} />
+                        <Route path="/services" element={<Strategy />} />
                     </Route>
                     <Route path="/auth" element={<AuthLayout />} >
                         <Route path="/auth/login" element={<Login />} />
                     </Route>
                 </Routes>
-
+  
             </BrowserRouter>
         </>
     )

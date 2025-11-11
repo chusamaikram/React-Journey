@@ -114,7 +114,7 @@ export default function CultureSection() {
                         </div>
                         <div className="flex flex-col items-start justify-between">
                             {ValueCards.map((item) => (
-                                <div key={item.id} className="mt-6 sm:mt-0  h-[120px] w-[1180px] py-8 px-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-20 justify-between ">
+                                <div key={item.id} className="mt-6 sm:mt-0  h-[120px] w-[1180px] py-8 px-4 sm:px-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-20 justify-between ">
                                     <div className="flex items-center gap-3 sm:gap-20 font-[Inter] ">
                                         <span className="w-[24px] text-lg ">{item.id}</span>
                                         <h2 className="text-[28px] sm:text-[32px] font-[200] font-[Geologica] leading-normal" >{item.title}</h2>

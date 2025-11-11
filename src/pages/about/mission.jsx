@@ -46,7 +46,7 @@ const MissionCard=[
                         <p className="mt-4 sm:mt-6 text-[28px] sm:text-[32px] font-[300] leading-[46px] font-[Geologica] text-start">ZeeFrames strives to be a leading UI/UX design agency known for innovative solutions that deliver exceptional user experiences and drive busi<span className="text-[#A3A3A3]">ness growth.
                             We blend creativity and user-centered design to craft intuitive, standout products and partner with clients to achieve lasting impact.</span></p>
                     </div>
-                    <div className="mt-8 sm:mt-20 flex flex-col sm:flex-row items-start justify-between">
+                    <div className="mt-8 sm:mt-20 flex flex-col md:flex-row items-start justify-between gap-y-6 ">
                         <p className="text-sm uppercase font-[Geologica]">Since 2020, what we get...</p>
                         <div className="grid grid-cols-1 sm:grid-cols-2 mx-auto sm:mx-0 items-start gap-12 sm:gap-18 ">
                             {MissionCard.map((item, index) => (

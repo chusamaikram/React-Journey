@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom"
 import Insight from "../../../assets/images/insight-detail.png"
 import Insight2 from "../../../assets/images/insight-detail2.png"
-import ShareIcon from "../../../assets/images/svg/share-icon.svg"
+import ShareIcon from "../../../assets/svg/share-icon.svg"
 import TrendingArticleImg from "../../../assets/images/trending-article.png"
 import RecentArticles from "../recent-articles"
 import ContactUs from "../../home/contact-us"
@@ -60,7 +60,7 @@ export default function InsightDetail() {
                             </div>
                             <div className="py-5 flex items-center justify-between w-full ">
                                 <div className=" flex items-center justify-start gap-2 text-[#CDCDCD] text-lg font-[Inter] leading-[normal] ">
-                                    <span >7 min min read</span>
+                                    <span >7 min read</span>
                                     <div className="w-[6px] h-[6px] bg-[#4D4C4C] rounded-full"></div>
                                     <time datetime="Jan 23, 2025">Jan 23, 2025</time>
                                 </div>
@@ -72,8 +72,8 @@ export default function InsightDetail() {
 
                             </div>
                         </div>
-                        <div className=" mt-15 rounded-[24px] w-full overflow-hidden">
-                            <img className="w-full h-auto object-cover" src={Insight} alt="insight thumbnail" width={1210} height={539} />
+                        <div className=" mt-15 w-full overflow-hidden">
+                            <img className="max-w-full h-auto object-contain" src={Insight} alt="insight thumbnail" width={1210} height={539} />
                         </div>
                     </div>
 

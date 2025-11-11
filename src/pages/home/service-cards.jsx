@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { cardbg } from "../../assets/images";
-import { ArrowIcon } from "../../assets/images/svg/index";
+import { ArrowIcon } from "../../assets/svg/index";
 
 export default function ServiceCard({ heading, title, path }) {
     return (

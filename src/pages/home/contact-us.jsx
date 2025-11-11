@@ -1,11 +1,11 @@
-import LinkdelnMini from "../../assets/images/svg/linkdelnmini"
-import ali from "../../assets/images/svg/ali.svg"
-import babar from "../../assets/images/svg/babar.svg"
-import TrustPilot from "../../assets/images/svg/trustpilot.svg"
-import UxUi from "../../assets/images/svg/ui-ux.svg"
-import Award from "../../assets/images/svg/award-2023.svg"
-import Behemoths from "../../assets/images/svg/behemoths.svg"
-import { CheckIcon } from "../../assets/images/svg"
+import LinkdelnMini from "../../assets/svg/linkdelnmini"
+import ali from "../../assets/svg/ali.svg"
+import babar from "../../assets/svg/babar.svg"
+import TrustPilot from "../../assets/svg/trustpilot.svg"
+import UxUi from "../../assets/svg/ui-ux.svg"
+import Award from "../../assets/svg/award-2023.svg"
+import Behemoths from "../../assets/svg/behemoths.svg"
+import { CheckIcon } from "../../assets/svg"
 import * as Yup from "yup";
 import InputField from "../../components/forminput"
 import { Form, Formik } from "formik"
@@ -52,7 +52,7 @@ export default function ContactUs({border_color="border-[#F3FE00]" , radius="rou
 
     return (
         <>
-            <section className="py-8 sm:py-[80px] ">
+            <section className="py-8 sm:py-[80px] " id="contact" >
                 <div className="container">
                     <div className="flex flex-col lg:flex-row items-start justify-center gap-8 sm:gap-16">
                         <div className="max-w-[636px] w-full flex flex-col items-start justify-center gap-8">

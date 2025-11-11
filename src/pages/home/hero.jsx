@@ -4,8 +4,8 @@ import bg3 from "../../assets/images/bg3.png"
 import industrylogo from "../../assets/images/industry-logo.png"
 import { adiqat, cisco, nissan, repurpose, trafilea, walmart, yallamotor } from "../../assets/images";
 import Button from "../../components/common/button";
-import mainvideo from "../../assets/videos/mainvideo.mp4"
-import { Bdot, Diamond, FigmaIcon, StarIcon, Wicon, XD } from "../../assets/images/svg";
+
+import { Bdot, Diamond, FigmaIcon, StarIcon, Wicon, XD } from "../../assets/svg";
 import Mainheading from "../../components/common/mainheading";
 
 export default function HeroSection() {
@@ -194,9 +194,7 @@ export default function HeroSection() {
                 </div>
             </section>
 
-            <section className=" above-glow relative overflow-hidden">
-                <video className=" home-video object-cover w-full h-auto" src={mainvideo} width={1440} height={766} autoPlay muted loop playsInline preload="auto"></video>
-            </section>
+           
         </>
     )
 }

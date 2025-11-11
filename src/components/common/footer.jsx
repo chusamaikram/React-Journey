@@ -1,6 +1,6 @@
 import { ZeeFramesLogo, FooterMobile, America, Europe, SaudiArabia, Pakistan } from "../../assets/images/index";
 import { Link } from "react-router-dom";
-import { BeIcon, FbIcon, InstaIcon, LinkedlnIcon, WebIcon, Xicon } from "../../assets/images/svg";
+import { BeIcon, FbIcon, InstaIcon, LinkedlnIcon, WebIcon, Xicon } from "../../assets/svg";
 export default function Footer() {
     const FooterLinks = [
         {

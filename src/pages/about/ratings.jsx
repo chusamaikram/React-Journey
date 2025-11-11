@@ -1,5 +1,5 @@
 import { div } from "framer-motion/client";
-import { RatingStar, GoodFirmsLogo, UpworkLogo, RatingClutch, } from "../../assets/images/svg";
+import { RatingStar, GoodFirmsLogo, UpworkLogo, RatingClutch, } from "../../assets/svg";
 
 
 export default function RatingsSection() {
@@ -36,7 +36,7 @@ export default function RatingsSection() {
                 <div className="container">
                     <div className="flex flex-col sm:flex-row items-center justify-center  gap-6 sm:gap-18">
                         {RatingCards.map(card => (
-                            <a className="flex flex-col items-start gap-3" key={card.id} href={card.link} target="_blank">
+                            <a className="max-w-full flex flex-col items-start gap-3" key={card.id} href={card.link} target="_blank">
 
                                 <div className="flex items-center justify-between sm:justify-center gap-3">
                                     <p className="text-[#CACACA] text-base leading-[16px] font-[Inter]">Reviewed on</p>

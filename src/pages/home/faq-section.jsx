@@ -1,5 +1,5 @@
 import Button from "../../components/common/button";
-import { ClutchLogo, MiniStar, HalfStar, PlusIcon, MinusIcon } from "../../assets/images/svg"
+import { ClutchLogo, MiniStar, HalfStar, PlusIcon, MinusIcon } from "../../assets/svg"
 import { Link } from "react-router-dom";
 import { useState } from "react";
 

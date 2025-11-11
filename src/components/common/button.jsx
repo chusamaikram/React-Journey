@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowIcon } from "../../assets/images/svg";
+import { ArrowIcon } from "../../assets/svg";
 
 export default function Button({
   path,
@@ -12,7 +12,7 @@ export default function Button({
   return (
     <Link
       to={path}
-      className={`group relative inline-flex items-center justify-center px-6 py-3 border rounded-full text-[16px] leading-6 font-semibold transition-all duration-300 ease-in-out ${className}`}
+      className={`group relative inline-flex items-center justify-center px-6 py-3 border rounded-full text-base leading-6 font-semibold transition-all duration-300 ease-in-out ${className}`}
     >
       {/* Default text */}
       <span
@@ -29,6 +29,7 @@ export default function Button({
           {hovertext}
         </span>
       )}
+     
     </Link>
   );
 }

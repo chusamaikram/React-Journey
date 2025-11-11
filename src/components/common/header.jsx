@@ -34,7 +34,7 @@ export default function Header() {
 
     return (
         <>
-            <header className="sticky top-0 z-9999 py-[22px] bg-black">
+            <header className="sticky top-0 z-9999 py-[22px] bg-[#0D0D0D]">
                 <div className="container">
                     <nav className="flex items-center justify-between">
                         <Link to="/">
@@ -44,6 +44,7 @@ export default function Header() {
                         <ul className={` py-12 lg:py-0 px-6 lg:px-0  flex flex-col gap-2 lg:gap-none lg:flex-row items-center absolute lg:static left-0 top-[80px] w-full lg:w-auto h-screen lg:h-auto bg-black lg:bg-transparent ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible lg:visible lg:opacity-100"}`}>
                             {Navlinks.map(link => (
                                 <li key={link.name}>
+                                    
                                     <Link to={link.path} className={`relative px-3 py-2 font-[Poppins] text-[18px] leading-[27px] ${pathname === link.path ? "text-[#F3FE00] " : "text-[#FFFFFF]"}`}
                                         onClick={() => setIsMenuOpen(false)}
                                     >
@@ -57,11 +58,61 @@ export default function Header() {
                                     </Link>
 
                                 </li>
+                //                 <li key={item.text} className="relative">
+                //                 {item.text === "Services" ? (
+                //                     <div className="relative">
+                //                         <button
+                //                             onClick={() => setIsOpen((prev) => !prev)}
+                //                             className="text-white cursor-pointer text-lg font-normal hover:text-[#F3FE00] hover:underline decoration-2 decoration-[#F3FE00] underline-offset-4 transition-all duration-300 flex items-center gap-1"
+                //                         >
+                //                             Services
+                //                             <svg
+                //                                 xmlns="http://www.w3.org/2000/svg"
+                //                                 fill="none"
+                //                                 viewBox="0 0 24 24"
+                //                                 strokeWidth={2}
+                //                                 stroke="currentColor"
+                //                                 className={`w-5 h-5 px-1 py-1 bg-[#464646] rounded-full transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+                //                                     }`}
+                //                             >
+                //                                 <path
+                //                                     strokeLinecap="round"
+                //                                     strokeLinejoin="round"
+                //                                     d="M19 9l-7 7-7-7"
+                //                                 />
+                //                             </svg>
+                //                         </button>
+
+                //                         {isOpen && (
+                //                             <ul className="absolute left-0 top-full mt-2 w-48 bg-[#111] border border-white/10 rounded-xl shadow-lg py-2 z-50">
+                //                                 {SERVICE_DROPDOWN.map((service) => (
+                //                                     <li key={service.text}>
+                //                                         <Link
+                //                                             to={service.url}
+                //                                             onClick={() => setIsOpen(false)}
+                //                                             className="block px-4 py-2 text-white text-sm hover:bg-[#F3FE00] hover:text-black transition-all duration-300"
+                //                                         >
+                //                                             {service.text}
+                //                                         </Link>
+                //                                     </li>
+                //                                 ))}
+                //                             </ul>
+                //                         )}
+                //                     </div>
+                //                 ) : (
+                //                     <Link
+                //                         to={item.url}
+                //                         className="text-white text-lg font-normal hover:text-[#F3FE00] hover:underline decoration-2 decoration-[#F3FE00] underline-offset-4 transition-all duration-300"
+                //                     >
+                //                         {item.text}
+                //                     </Link>
+                //                 )}
+                //             </li>
                             ))}
 
                             <Button
 
-                                path="/contact" hovertext={" Let's talk"} defaulttext={"Work with us"}
+                                path="contact" hovertext={" Let's talk"} defaulttext={"Work with us"}
                                 className="flex sm:hidden w-full  border border-[#f3fe00] bg-[#f3fe00] transition-[background-color,border-color] duration-500 ease-in-out hover:bg-black text-black hover:text-[#f3fe00] "
                             />
 

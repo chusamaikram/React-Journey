@@ -1,5 +1,5 @@
 import image from "../../assets/images/about-photo.png"
-import { ClientIcon, TeamIcon, TestimonialIcon } from "../../assets/images/svg"
+import { ClientIcon, TeamIcon, TestimonialIcon } from "../../assets/svg"
 import Heading from "../../components/common/headings"
 export default function AboutSection() {
 
@@ -26,9 +26,9 @@ export default function AboutSection() {
         <>
             <section className="bg-[#141414] py-8 sm:py-[80px]">
                 <div className="container">
-                    <div className="flex flex-col sm:flex-row items-start justify-between gap-[80px]">
+                    <div className="grid grid-cols-1 md:[grid-template-columns:minmax(100px,390px)_minmax(100px,771px)] items-start  gap-[80px]">
                         <div className=" max-w-[390px]">
-                            <img className="object-cover w-full h-auto" src={image} alt="about thumbnail" width={390} height={392} />
+                            <img className="object-cover w-full h-auto object-cover"  src={image} alt="about thumbnail" width={390} height={392} />
                         </div>
                         <div className="">
                             <div className="max-w-[570px]">
@@ -39,9 +39,9 @@ export default function AboutSection() {
                                 />
                             </div>
 
-                            <div className="mt-12 flex flex-wrap flex-col sm:flex-row items-start justify-between gap-6">
+                            <div className=" mt-12 flex flex-wrap flex-col sm:flex-row items-start justify-between gap-6">
                                 {AboutCards.map((card, index) => (
-                                    <div key={index} className="border border-[#292929] rounded-[12px] p-4 h-[252px] w-[241px] flex flex-col flex-grow-1 items-start gap-6">
+                                    <div key={index} className="border border-[#292929] rounded-[12px] sm:p-4 h-[252px] w-full md:w-[241px] flex flex-col flex-grow-1 items-start gap-6">
                                         {card.icon}
                                         <div>
                                             <h3 className="text-lg leading-[30px] font-[Geologica]">{card.title}</h3>

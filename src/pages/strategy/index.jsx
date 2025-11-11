@@ -4,9 +4,10 @@ import ContactUs from "../home/contact-us";
 
 import strategyThumbnail from "../../assets/images/strategy-img.png";
 import Heading from "../../components/common/headings";
-import Icon from "../../assets/images/svg/strategy-icon.svg"
+import Icon from "../../assets/svg/strategy-icon.svg"
 import Process from "./process";
 import ProducrStrategy from "./product-strategy";
+
 
 export default function Strategy() {
 

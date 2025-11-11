@@ -1,5 +1,6 @@
 import gradientbg from "../../assets/images/gradient-bg.png"
 import SpinningStar from "../../assets/images/spining-star.gif"
+import CursorGlow from "../../components/common/blowanimation";
 import Button from "../../components/common/button";
 import ContactUs from "./contact-us";
 import FaqSection from "./faq-section";
@@ -8,10 +9,12 @@ import InsightsSection from "./insights";
 import ProcessSection from "./process";
 import Services from "./services";
 import Showcase from "./showcase";
+import VideoSection from "./video-section";
 export default function Home() {
     return (
         <>
             <HeroSection />
+            <VideoSection />
             <Services />
             <ProcessSection />
             <Showcase />
@@ -54,6 +57,7 @@ export default function Home() {
                 </a>
             </div>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"></link>
+            <CursorGlow className="relative min-h-screen bg-[#0a0a0a] text-white" />
 
         </>
     )

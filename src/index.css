@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Plus Jakarta Sans', 'Inter Tight', 'Inter', 'Poppins', 'Geologica', sans-serif;
-  background-color: #0D0D0D;
+  background-color: #0B0B0B;
   color: white;
 }
 
@@ -46,13 +46,21 @@ body {
   .header-btn {
     display: none;
   }
+
+  .process-cards::before {
+    display: none;
+  }
 }
 
-/* @media(max-width:890px) {
+@media(min-width: 576px) and (max-width: 991px)  {
   .container {
     padding: 0 40px;
   }
-} */
+
+  .process-cards::before {
+    display: none;
+  }
+}
 
 .floating_btn {
   position: fixed;
@@ -114,9 +122,9 @@ body {
 
 }
 
-/* .home-video {
-  max-height: calc(100dvh - 88px);
-} */
+.home-video {
+  max-height: calc(100vh - 88px);
+}
 
 /* .above-glow{
   position: relative;
@@ -124,10 +132,10 @@ body {
 } */
 
 .blogs-section {
-    padding-top: 150px;
-    padding-bottom: 100px;
-    background-image: url(assets/images/trending-sec-bg.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  background-image: url(assets/images/trending-sec-bg.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }

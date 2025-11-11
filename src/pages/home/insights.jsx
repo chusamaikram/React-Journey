@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowIcon } from "../../assets/images/svg";
+import { ArrowIcon } from "../../assets/svg";
 import { insight1, insight2, insight3 } from "../../assets/images";
 
 export default function InsightsSection() {

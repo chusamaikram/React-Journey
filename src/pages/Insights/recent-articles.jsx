@@ -1,6 +1,6 @@
 import Heading from "../../components/common/headings";
-import ArrowLeft from "../../assets/images/svg/arrow-left.svg";
-import ArrowRight from "../../assets/images/svg/arrow-right.svg";
+import ArrowLeft from "../../assets/svg/arrow-left.svg";
+import ArrowRight from "../../assets/svg/arrow-right.svg";
 import { Link } from "react-router-dom";
 import RecentArticle from "../../assets/images/insight-img.png"
 

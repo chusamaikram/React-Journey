@@ -45,7 +45,7 @@ export default function TeamSection() {
                     <div className="container">
 
                         <div className=" flex flex-col gap-6 sm:gap-14">
-                            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-none justify-between sm:w-[930px] sm:ml-auto">
+                            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-none justify-between md:w-[930px] sm:ml-auto">
                                 {TeamGroup1.map(team => (
                                     <div key={team.id} className={`max-w-[310px] flex flex-col items-start gap-4 ${team.id === 1 ? '' : 'sm:mt-25'} `}>
                                         <img className="w-full h-full object-cover rounded-[12px]" src={team.image} alt={team.name}
@@ -59,9 +59,9 @@ export default function TeamSection() {
 
                                 ))}
                             </div>
-                            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-none justify-between sm:w-[930px] sm:mr-auto">
+                            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-none justify-between md:w-[930px] sm:mr-auto">
                                 {TeamGroup2.map(team => (
-                                    <div key={team.id} className={`max-w-[310px] flex flex-col items-start gap-4 ${team.id === 4 ? 'sm:mt-25 sm:mr-25' : ''} `}>
+                                    <div key={team.id} className={`max-w-[310px] flex flex-col items-start gap-4 ${team.id === 4 ? 'sm:mt-25 md:mr-25' : ''} `}>
                                         <img className="w-full h-full object-cover rounded-[12px]" src={team.image} alt={team.name}
                                             width={310}
                                             height={360} />
@@ -73,7 +73,7 @@ export default function TeamSection() {
 
                                 ))}
                             </div>
-                            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-none justify-between sm:w-[930px] sm:mx-auto">
+                            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-none justify-between md:w-[930px] sm:mx-auto">
                                 {TeamGroup3.map(team => (
                                     <div key={team.id} className={`max-w-[310px] flex flex-col items-start gap-4 ${team.id === 6 ? 'sm:mt-25 ' : ''} `}>
                                         <img className="w-full h-full object-cover rounded-[12px]" src={team.image} alt={team.name}
@@ -89,7 +89,7 @@ export default function TeamSection() {
                             </div>
                             <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-none sm:items-start justify-between">
                                 {TeamGroup4.map(team => (
-                                    <div key={team.id} className={`max-w-[310px] flex flex-col items-start gap-4 ${team.id === 8 ? 'sm:mt-[300px] sm:mr-[50px] ' : ''}  ${team.id === 9 ? 'sm:mt-25 ' : ''}`}>
+                                    <div key={team.id} className={`max-w-[310px] flex flex-col items-start gap-4 ${team.id === 8 ? 'sm:mt-[300px] md:mr-[50px] ' : ''}  ${team.id === 9 ? 'sm:mt-25 ' : ''}`}>
                                         <img className="w-full h-full object-cover rounded-[12px]" src={team.image} alt={team.name}
                                             width={310}
                                             height={360} />
