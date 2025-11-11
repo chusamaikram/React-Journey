@@ -3,8 +3,11 @@ import Button from "../../components/common/button";
 import Mainheading from "../../components/common/mainheading";
 import ShowcaseCard from "../home/showcase-card";
 import ContactUs from "../home/contact-us";
+import useTitle from "../../components/common/page-title";
 
 export default function Work() {
+
+    useTitle("Work | Zeeframes");
 
 
     const Filters = [

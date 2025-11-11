@@ -12,8 +12,12 @@ import CultureSection from './culture';
 import Mainheading from '../../components/common/mainheading';
 import TeamSection from './team';
 import RatingsSection from './ratings';
+import useTitle from '../../components/common/page-title';
 
 export default function AboutUs() {
+
+    useTitle("About | Zeeframes");
+
     const HomeCards = [
         {
             heading: '4.9 Rating',
@@ -58,8 +62,8 @@ export default function AboutUs() {
                         </div>
                         <div className='relative  z-[10] flex flex-col items-center justify-center gap-3'>
 
-                            <Mainheading  className="max-w-[774px]"
-                            text="Elite Design Partners" />
+                            <Mainheading className="max-w-[774px]"
+                                text="Elite Design Partners" />
                             <p className='text-base sm:text-lg text-center leading-[27px] max-w-[774px] font-[Inter] capitalize'>We are the best product design agency for startups. We excel in UI/UX design, branding, web development & committed to 100% satisfaction with every project.</p>
 
                             <div className='mt-5'>

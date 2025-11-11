@@ -6,10 +6,13 @@ import InsightsImg from "../../assets/images/insight-thumbnail.png"
 import RecentArticles from "./recent-articles";
 import ContactUs from "../home/contact-us";
 import TrendingArticle from "./trending-article";
+import useTitle from "../../components/common/page-title";
 
 
 
 export default function Insights() {
+
+    useTitle("Insights | Zeeframes");
     return (
         <>
             <section className="bg-[#030303]py-8 sm:py-[80px] ">

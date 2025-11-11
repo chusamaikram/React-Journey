@@ -7,9 +7,12 @@ import Heading from "../../components/common/headings";
 import Icon from "../../assets/svg/strategy-icon.svg"
 import Process from "./process";
 import ProducrStrategy from "./product-strategy";
+import useTitle from "../../components/common/page-title";
 
 
 export default function Strategy() {
+
+    useTitle("Services | Zeeframes")
 
     const StrategyListing = [
         { id: 1, title: "Defining product vision and goals" },
