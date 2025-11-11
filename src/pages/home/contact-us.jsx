@@ -16,7 +16,7 @@ const SignupSchema = Yup.object({
     message: Yup.string().required("Message is required"),
 });
 
-export default function ContactUs() {
+export default function ContactUs({border_color="border-[#F3FE00]" , radius="rounded-full"}) {
 
     const Checks = ["You'll hear from us within one business day.",
         "Our team will gather your project details and put together a clear brief.",
@@ -144,7 +144,7 @@ export default function ContactUs() {
                                 handleBlur,
                                 isSubmitting,
                             }) => (
-                                <Form className="w-full sm:w-[540px]">
+                                <Form className="w-full grow sm:w-[540px]">
                                     <div className=" p-4 sm:p-6  flex flex-col items-start gap-7 bg-white/5 backdrop-blur-sm rounded-[24px] border border-[#3C3C3C] ">
                                         <div className="w-full">
                                             <InputField
@@ -218,7 +218,7 @@ export default function ContactUs() {
                                         </div>
 
                                         <button type="submit" disabled={isSubmitting}
-                                            className={`cursor-pointer px-5.5 py-3.5 my-1 bg-[#242323] border border-[#F3FE00] rounded-full  w-full flex items-center justify-center text-base font-semibold leading-[21px] text-white font-['Inter_Tight'] ${isSubmitting ? "opacity-70 cursor-not-allowed" : ""}`}>  {isSubmitting ? "Submitting..." : "Submit Inquiry"}</button>
+                                            className={`cursor-pointer px-5.5 py-3.5 my-1 bg-[#242323] border ${border_color} ${radius}  w-full flex items-center justify-center text-base font-semibold leading-[21px] text-white font-['Inter_Tight'] ${isSubmitting ? "opacity-70 cursor-not-allowed" : ""}`}>  {isSubmitting ? "Submitting..." : "Submit Inquiry"}</button>
                                         <div className="font-['Inter_Tight'] flex flex-col items-start gap-2">
                                             <p className="text-sm text-[#F2F2F2]">Hate contact forms? Direct Contact.</p>
                                             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">

@@ -122,3 +122,12 @@ body {
   position: relative;
   z-index: 50;
 } */
+
+.blogs-section {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    background-image: url(assets/images/trending-sec-bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

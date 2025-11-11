@@ -139,7 +139,7 @@ export default function Footer() {
                                     height={24}
                                 />
                                 <h3 className="mt-[6px] text-lg font-medium font-[Inter Tight] text-[#FFFFFF]">{item.title}</h3>
-                                <a href={item.addresslink} className="text-[14px] leading-[22px] font-[Inter Tight] text-[#8E8E8E]" target="_blank">{item.address}</a>
+                                <a href={item.addresslink} className="text-[14px] line-clamp-2 leading-[22px] font-[Inter Tight] text-[#8E8E8E]" target="_blank">{item.address}</a>
                                 <a href={`tel:${item.phone}`} className="text-base leading-[22px] font-medium font-[Inter Tight] text-[#E1E1E1]">{item.phone}</a>
                             </div>
                         ))}

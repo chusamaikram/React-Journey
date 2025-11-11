@@ -270,7 +270,7 @@ export const TestimonialIcon = () => (
     </svg>
 )
 
-export const RatingStar = ({ fill = "#FF3D2E", width="16", height="15" }) => (
+export const RatingStar = ({ fill = "#FF3D2E", width = "16", height = "15" }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 16 15" fill="none">
         <path d="M7.6084 0L9.40451 5.52786H15.2169L10.5146 8.94427L12.3107 14.4721L7.6084 11.0557L2.90612 14.4721L4.70223 8.94427L-5.38826e-05 5.52786H5.81229L7.6084 0Z" fill={fill} />
     </svg>
@@ -317,3 +317,11 @@ export const RatingClutch = () => (
         </defs>
     </svg>
 )
+
+
+export const SearchIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <path d="M15.5833 15.5833L19.25 19.25M17.4167 10.0833C17.4167 8.13841 16.6441 6.27315 15.2688 4.89788C13.8935 3.52262 12.0283 2.75 10.0833 2.75C8.13841 2.75 6.27315 3.52262 4.89788 4.89788C3.52262 6.27315 2.75 8.13841 2.75 10.0833C2.75 12.0283 3.52262 13.8935 4.89788 15.2688C6.27315 16.6441 8.13841 17.4167 10.0833 17.4167C12.0283 17.4167 13.8935 16.6441 15.2688 15.2688C16.6441 13.8935 17.4167 12.0283 17.4167 10.0833Z" stroke="white" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+)
+

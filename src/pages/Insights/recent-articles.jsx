@@ -1,0 +1,187 @@
+import Heading from "../../components/common/headings";
+import ArrowLeft from "../../assets/images/svg/arrow-left.svg";
+import ArrowRight from "../../assets/images/svg/arrow-right.svg";
+import { Link } from "react-router-dom";
+import RecentArticle from "../../assets/images/insight-img.png"
+
+
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { useRef, useState } from 'react';
+
+
+const RecentBlog = ({ title, desc, path, className, img, readtime, date }) => {
+    return (
+        <>
+            <Link to={path} >
+                <div className={`flex flex-col items-center max-w-[381] backdrop-blur  ${className}`}>
+                    <div className="overflow-hidden rounded-[16px_16px_0_0] ">
+                        <img className=" w-full object-cover" src={img} alt="thumbnail" width={382} height={246} />
+                    </div>
+                    <div className="p-6 border border-white/20 w-full bg-white/8  rounded-[0_0_16px_16px]">
+                        <div className="  flex flex-col items-start gap-3">
+                            <h3 className="text-[19px] font-[Geologica] font-semibold leading-[normal] ">{title}</h3>
+                            <p className="text-base font-[Inter] leading-[25px] line-clamp-2 ">{desc}</p>
+                            <div className="flex items-center gap-2 font-[Inter] text-[12px] mt-3">
+                                <span >{readtime} min read</span>
+                                <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
+                                <time datetime={date}>{date}</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Link >
+        </>
+    )
+}
+
+export default function RecentArticles() {
+    const swiperRef = useRef(null);
+    const [isBeginning, setIsBeginning] = useState(true);
+    const [isEnd, setIsEnd] = useState(false);
+
+    const LatestInsight = [
+        {
+            id: 1,
+            img: RecentArticle,
+            title: "20+ GenAI UX patterns, examples and implementation tactics",
+            desc: "A shared language for product teams to build usable, intelligent and safe GenAI",
+            path: "/insights/insight-details",
+            readtime: "7",
+            date: "Jan 23, 2025",
+        },
+        {
+            id: 2,
+            img: RecentArticle,
+            title: "20+ GenAI UX patterns, examples and implementation tactics",
+             desc: "A shared language for product teams to build usable, intelligent and safe GenAI",
+            path: "/insights/insight-details",
+            readtime: "7",
+            date: "Jan 23, 2025",
+        },
+        {
+            id: 3,
+            img: RecentArticle,
+            title: "20+ GenAI UX patterns, examples and implementation tactics",
+             desc: "A shared language for product teams to build usable, intelligent and safe GenAI",
+            path: "/insights/insight-details",
+            readtime: "7",
+            date: "Jan 23, 2025",
+        },
+        {
+            id: 4,
+            img: RecentArticle,
+            title: "20+ GenAI UX patterns, examples and implementation tactics",
+            desc: "A shared language for product teams to build usable, intelligent and safe GenAI",
+            path: "/insights/insight-details",
+            readtime: "7",
+            date: "Jan 23, 2025",
+        },
+
+    ]
+
+
+   
+    return (
+        <>
+
+            {/* <section className="py-8 sm:py-[80px]">
+                <div className="container">
+                    <div className="mb-8 sm:mb-9 flex flex-col sm:flex-row items-start sm:items-center justify-between">
+                        <Heading className="items-start justify-start gap-3" title="Latest insights" secHeading="Our Recent Articles" />
+                        <div className="flex items-center gap-3">
+                            <button className="h-[48px] w-[68px] opacity-30 rounded-full bg-white flex item-center justify-center px-5">
+                                <img src={ArrowLeft} alt="arrow-left" />
+                            </button>
+                            <button className="h-[48px] w-[68px] rounded-full bg-white flex item-center justify-center px-5">
+                                <img src={ArrowRight} alt="arrow-right" />
+                            </button>
+                        </div>
+                    </div>
+                    <div className="overflow-hidden">
+                        <div className="flex items-center ">
+                            {LatestInsight.map(item => (
+                                <div key={item.id} className="w-[386px] mr-[25px]">
+                                    <RecentBlog title={item.title}
+                                        desc={item.desc}
+                                        path={item.path}
+                                        img={item.img}
+                                        readtime={item.readtime}
+                                        date={item.date} />
+                                </div>))}
+                        </div>
+                    </div>
+                </div>
+            </section> */}
+            <section className="py-8 sm:py-[80px]">
+                <div className="container">
+                    <div className="mb-8 sm:mb-9 flex flex-col sm:flex-row items-start sm:items-center justify-between">
+                        <Heading
+                            className="items-start justify-start gap-3"
+                            title="Latest insights"
+                            secHeading="Our Recent Articles"
+                        />
+                        <div className="flex items-center gap-3">
+                            <button
+                                onClick={() => swiperRef.current?.slidePrev()}
+                                disabled={isBeginning}
+                                className={`h-[48px] w-[68px] rounded-full bg-[#F3FE00] flex items-center justify-center px-5 ${isBeginning ? "opacity-20 cursor-not-allowed" : ""
+                                    }`}
+                            >
+                                <img src={ArrowLeft} alt="arrow-left" />
+                            </button>
+
+                            <button
+                                onClick={() => swiperRef.current?.slideNext()}
+                                disabled={isEnd}
+                                className={`h-[48px] w-[68px] rounded-full bg-[#F3FE00] flex items-center justify-center px-5 ${isEnd ? "opacity-20 cursor-not-allowed" : ""
+                                    }`}
+                            >
+                                <img src={ArrowRight} alt="arrow-right" />
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Slider Section */}
+                    <div className="overflow-hidden">
+                        <Swiper
+                            onSwiper={(swiper) => (swiperRef.current = swiper)}
+                            onSlideChange={(swiper) => {
+                                setIsBeginning(swiper.isBeginning);
+                                setIsEnd(swiper.isEnd);
+                            }}
+                            spaceBetween={25}
+                            slidesPerView={1.1}
+                            breakpoints={{
+                                640: { slidesPerView: 2 },
+                                1024: { slidesPerView: 3 },
+                            }}
+                        >
+                            {LatestInsight.map((item) => (
+                                <SwiperSlide key={item.id}>
+                                    <div className="">
+                                        <RecentBlog
+                                            title={item.title}
+                                            desc={item.desc}
+                                            path={item.path}
+                                            img={item.img}
+                                            readtime={item.readtime}
+                                            date={item.date}
+                                        />
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+                </div>
+            </section>
+
+
+            
+
+           
+
+        </>
+    )
+}

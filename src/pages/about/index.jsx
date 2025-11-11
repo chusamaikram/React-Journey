@@ -66,8 +66,8 @@ export default function AboutUs() {
 
                                 <Button
                                     defaulttext="Request a Proposal Today"
-                                    hovertext="Request a Proposal Today"
                                     showicon={false}
+                                    disableHover={true}
                                 />
                             </div>
 
