@@ -11,7 +11,7 @@ export default function InsightsSection() {
             desc: "A shared language for product teams to build usable, intelligent and safe GenAI experiences...",
             timerequire: "7 min read",
             date: "Jan 23, 2025",
-            path: "/insights",
+            path: "/insights/insight-details",
         },
         {
             id: 2,
@@ -20,7 +20,7 @@ export default function InsightsSection() {
             desc: "Weekly curated resources for designers — thinkers and makers.",
             timerequire: "7 min read",
             date: "Jan 23, 2025",
-            path: "/insights",
+            path: "/insights/insight-details",
         },
         {
             id: 3,
@@ -29,7 +29,7 @@ export default function InsightsSection() {
             desc: "AI is changing how we work. Here’s why and how we must preserve the human spirit that drives...",
             timerequire: "7 min read",
             date: "Jan 23, 2025",
-            path: "/insights",
+            path: "/insights/insight-details",
         },
     ]
     return (
@@ -50,7 +50,7 @@ export default function InsightsSection() {
                     </div>
                     <div className="pt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 items-start">
                         {InsightCards.map(item => (
-                            <Link path={item.path} key={item.id} className=" bg-[#121212] border border-[#2D2D2D] rounded-[12px] overflow-hidden flex flex-col items-center justify-center" >
+                            <Link to={item.path} key={item.id} className=" bg-[#121212] border border-[#2D2D2D] rounded-[12px] overflow-hidden flex flex-col items-center justify-center" >
                                 <div className="h-[227px] overflow-hidden">
                                     <img className="h-full w-full object-cover" src={item.img} alt={item.title} width={392} height={227} />
                                 </div>
