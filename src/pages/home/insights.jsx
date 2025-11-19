@@ -11,7 +11,7 @@ export default function InsightsSection() {
             desc: "A shared language for product teams to build usable, intelligent and safe GenAI experiences...",
             timerequire: "7 min read",
             date: "Jan 23, 2025",
-            path: "#",
+            path: "/insights",
         },
         {
             id: 2,
@@ -20,7 +20,7 @@ export default function InsightsSection() {
             desc: "Weekly curated resources for designers — thinkers and makers.",
             timerequire: "7 min read",
             date: "Jan 23, 2025",
-            path: "#",
+            path: "/insights",
         },
         {
             id: 3,
@@ -29,7 +29,7 @@ export default function InsightsSection() {
             desc: "AI is changing how we work. Here’s why and how we must preserve the human spirit that drives...",
             timerequire: "7 min read",
             date: "Jan 23, 2025",
-            path: "#",
+            path: "/insights",
         },
     ]
     return (
@@ -42,7 +42,7 @@ export default function InsightsSection() {
                             <h2 className="text-[28px] sm:text-[40px] text-center sm:text-start font-bold leading-[40px] sm:leading-[44px] font-[Geologica]">Insights That Inspire Vision Forward</h2>
                         </div>
                         <div>
-                            <Link to="#" className="h-[48px] flex items-center justify-between p-5 rounded-full bg-white text-black text-base font-semibold leading-[24px] font-[Inter]" >
+                            <Link to="/insights" className="h-[48px] flex items-center justify-between p-5 rounded-full bg-white text-black text-base font-semibold leading-[24px] font-[Inter]" >
                                 Explore More
                                 <ArrowIcon />
                             </Link>
@@ -50,16 +50,16 @@ export default function InsightsSection() {
                     </div>
                     <div className="pt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 items-start">
                         {InsightCards.map(item => (
-                            <div key={item.id} className="h-[545px] bg-[#121212] border border-[#2D2D2D] rounded-[16px]  flex flex-col items-center justify-center" >
-                                <div className="h-[227px]">
-                                    <img className="h-full object-contain" src={item.img} alt={item.title} width={392} height={227} />
+                            <Link path={item.path} key={item.id} className=" bg-[#121212] border border-[#2D2D2D] rounded-[12px] overflow-hidden flex flex-col items-center justify-center" >
+                                <div className="h-[227px] overflow-hidden">
+                                    <img className="h-full w-full object-cover" src={item.img} alt={item.title} width={392} height={227} />
                                 </div>
 
                                 <div className="h-full p-6 flex flex-col items-start">
                                     <span className="hidden sm:block text-[12px] font-[Inter] text-white">ZeeFrames</span>
                                     <div className="flex flex-col items-start gap-2 py-5">
-                                        <Link className="text-[20px] sm:text-[24px] font-medium font-[Poppins] text-white" to={item.path}> {item.title}</Link>
-                                        <p className="text-base leading-[24px]">{item.desc}</p>
+                                        <h3 className="text-[20px] sm:text-[24px] line-clamp-3 font-medium font-[Poppins] text-white"> {item.title}</h3>
+                                        <p className="text-base line-clamp-2 leading-[24px]">{item.desc}</p>
                                     </div>
                                     <div className="flex items-center gap-2 text-[12px] font-[Inter]">
                                         <span >{item.timerequire}</span>
@@ -67,7 +67,7 @@ export default function InsightsSection() {
                                         <time dateTime={item.date}>{item.date}</time>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
 
                         ))}
 

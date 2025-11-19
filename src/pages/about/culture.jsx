@@ -82,7 +82,7 @@ export default function CultureSection() {
     ]
     return (
         <>
-            <section className=" bg-[#141414] py-8 sm:py-[80px]">
+            <section className=" bg-[#0D0D0D] py-8 sm:py-[80px]">
                 <div className="container">
                     <Heading
                         title="Our culture"
@@ -105,7 +105,7 @@ export default function CultureSection() {
                 </div>
             </section>
 
-            <section className=" bg-[#141414] py-8 sm:py-[80px]">
+            <section className=" bg-[#0D0D0D] py-8 sm:py-[80px]">
                 <div className="container">
                     <div className="flex flex-col items-start gap-8 sm:gap-20 justify-between">
                         <div>

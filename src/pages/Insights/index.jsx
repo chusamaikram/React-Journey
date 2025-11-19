@@ -15,7 +15,7 @@ export default function Insights() {
     useTitle("Insights | Zeeframes");
     return (
         <>
-            <section className="bg-[#030303]py-8 sm:py-[80px] ">
+            <section className="bg-[#030303] py-12 sm:py-[80px] ">
 
                 <div className="container">
                     <div className='relative'>

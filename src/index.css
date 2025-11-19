@@ -52,7 +52,7 @@ body {
   }
 }
 
-@media(min-width: 576px) and (max-width: 991px)  {
+@media(min-width: 576px) and (max-width: 991px) {
   .container {
     padding: 0 40px;
   }
@@ -128,7 +128,7 @@ body {
 
 /* .above-glow{
   position: relative;
-  z-index: 50;
+  z-index: 99;
 } */
 
 .blogs-section {
@@ -138,4 +138,16 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+
+.service-link::after {
+  content: "";
+  background:transparent;
+  display: block;
+  width: 100px;
+  height: 20px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
 }

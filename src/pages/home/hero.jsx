@@ -4,8 +4,9 @@ import bg3 from "../../assets/images/bg3.png"
 import industrylogo from "../../assets/images/industry-logo.png"
 import { adiqat, cisco, nissan, repurpose, trafilea, walmart, yallamotor } from "../../assets/images";
 import Button from "../../components/common/button";
+import HeroStar from "../../assets/svg/hero-star.svg"
 
-import { Bdot, Diamond, FigmaIcon, StarIcon, Wicon, XD } from "../../assets/svg";
+import { Bdot, Diamond, FigmaIcon, StarIcon1, StarIcon2, Wicon, XD } from "../../assets/svg";
 import Mainheading from "../../components/common/mainheading";
 
 export default function HeroSection() {
@@ -109,7 +110,7 @@ export default function HeroSection() {
             width: "135",
             height: "33"
         },
-         {
+        {
             name: 'yallamotor',
             image: yallamotor,
             width: "152",
@@ -121,9 +122,9 @@ export default function HeroSection() {
             width: "142",
             height: "33"
         },
-       
-      
-       
+
+
+
     ]
 
     return (
@@ -133,23 +134,28 @@ export default function HeroSection() {
                 <div className="container">
                     <div className="relative ">
 
-                        <img className="absolute z-0 top-0 left-[20px] hidden sm:block blur-[30px] opacity-[0.8]" src={bg1} alt="" />
-                        <img className="absolute z-0 top-[150px] sm:top-0 -left-[20px] sm:left-[130px] " src={bg2} alt="" />
-                        <img className="absolute z-0 top-0 right-0 blur-[30px] hidden sm:block opacity-[0.8]" src={bg3} alt="" />
-                        <StarIcon />
+                        <img className="absolute z-0 top-0 -left-[65px] hidden sm:block blur-[30px]" src={bg1} alt="" />
+                        <img className="hidden sm:block  absolute z-0 top-[150px] sm:top-0 -left-[20px] sm:left-[65px] " src={bg2} alt="" />
+                        <img className="absolute z-0 -top-[15px] -right-[60px] blur-[30px] hidden sm:block opacity-[0.8]" src={bg3} alt="" />
+                        <StarIcon1 />
+                        <StarIcon2 />
+                        {/* <img className="w-[47px] sm:w-full absolute z-1 top-[330px] sm:top-[380px] left-0 sm:left-[65px]" src={HeroStar} alt="star icon" width={73} height={80} /> */}
 
                         <div className="absolute z-10 top-0 left-0">
-                            <div className="above-glow  w-[327px] sm:w-[600px] mt-8 sm:mt-12 mx-auto bg-[#0D0D0C] rounded-[8px] border border-[#303030] flex flex-col sm:flex-row items-start sm:items-center justify-center gap-5 p-2">
+                            <div className="above-glow mx-auto w-fit sm:w-[600px] mt-8 sm:mt-12 mx-auto bg-[#0B0B0B] rounded-[8px] border border-[rgba(60,60,60,0.4)] flex flex-col sm:flex-row items-start sm:items-center justify-center gap-5 p-2">
                                 <div className="flex items-center gap-3">
                                     <img src={industrylogo} alt="" />
-                                    <p>Trusted by startups to craft $100M+ designs with</p>
+                                    <p className="leading-[normal]">Trusted by startups to craft $100M+ designs with</p>
                                 </div>
 
-                                <ul className="flex items-center">
+                                <ul className="group flex items-center   ">
                                     {Startups.map(item => (
-                                        <li key={item.id}
-                                            className="-ms-[7px] w-[32px] h-[32px] rounded-full bg-[#303030] border border-[#0D0D0C] flex items-center justify-center ">
-                                            {item.icon}
+                                        <li key={item.id}>
+                                            <div className={`-ms-[7px] w-[32px] h-[32px] rounded-full bg-[#303030] border border-[#0D0D0C] flex items-center justify-center transition-transform duration-300 ease-in-out ${item.id === 1 ? "group-hover:translate-x-0" : "group-hover:translate-x-[6px]"} `}>
+                                                {item.icon}
+                                            </div>
+
+
                                         </li>
 
                                     ))}
@@ -157,10 +163,17 @@ export default function HeroSection() {
 
                                 </ul>
                             </div>
-                            <div className="relative  flex flex-col items-center justify-center gap-3 py-12">
-                               < Mainheading  text="Creative Intelligence in Every Pixel" />
-                                <p className="text-[20px] text-center capitalize text-[#FFFFFF] font-[Inter]"> We craft <span className="text-[#F3FE00] font-[Plus Jakarta Sans]"> stunning</span> designs for businesses worldwide.</p>
-                                <span className="absolute hidden lg:block  origin-right rotate-7 top-[60px] right-[45px] bg-[#F3FE00] py-[6px] px-2 rounded-[8px] text-[#0B0B0B] text-[12px] font-bold uppercase font-[Geologica]"> NO CODE</span>
+                            <div className="flex flex-col items-center justify-center gap-3 py-12">
+                                <div className="relative">
+                                    <h1 className=" w-[330px] sm:w-[700px] lg:w-[978px] text-center font-[Geologica] uppercase font-bold text-[36px]  sm:text-[42px] lg:text-[72px]  leading-[50px] sm:leading-[64px] lg:leading-[96px]">
+                                        Creative Intelligence in Every Pixel
+                                    </h1>
+                                    <span className="absolute hidden md:block  rotate-7 top-[10px] -right-[7px] bg-[#F3FE00] py-[6px] px-2 rounded-[8px] text-[#0B0B0B] text-[12px] font-bold uppercase font-[Geologica]"> NO CODE</span>
+
+
+                                </div>
+                                <p className=" w-[319px] sm:w-full text-base text-center capitalize text-[#FFFFFF] font-[Inter]"> We craft <span className="text-[#F3FE00] font-[Plus Jakarta Sans]"> stunning</span> designs for businesses worldwide.</p>
+
                             </div>
                             <div className=" above-glow flex items-center justify-center gap-[20px]">
                                 <Button
@@ -169,7 +182,7 @@ export default function HeroSection() {
                                     showicon={false}
                                 />
                                 <Button
-                                    path="https://www.figma.com" target="_blank" hovertext={" Open "} defaulttext={"©2025 Work"}
+                                    path="/work" target="_blank" hovertext={" Open "} defaulttext={"©2025 Work"}
                                     className="w-[149px] h-[48px] bg-black border border-white font-[Inter] hover:border-[#F3FE00] "
                                     showicon={false}
                                 />
@@ -194,7 +207,7 @@ export default function HeroSection() {
                 </div>
             </section>
 
-           
+
         </>
     )
 }

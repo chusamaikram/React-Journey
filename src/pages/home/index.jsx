@@ -7,27 +7,28 @@ import FaqSection from "./faq-section";
 import HeroSection from "./hero";
 import InsightsSection from "./insights";
 import ProcessSection from "./process";
-import Services from "./services";
+import ServicesSection from "./services";
 import Showcase from "./showcase";
 import VideoSection from "./video-section";
 export default function Home() {
     return (
         <>
+            <CursorGlow />
             <HeroSection />
             <VideoSection />
-            <Services />
+            <ServicesSection />
             <ProcessSection />
             <Showcase />
 
-            <section className=" bg-cover bg-center p-8 sm:pt-[100px] pb-none sm:pb-[110px]"
+            <section className="relative z-20 bg-cover bg-center pt-8 sm:pt-[100px] pb-8 sm:pb-[110px]"
                 style={{ backgroundImage: `url(${gradientbg})` }}>
                 <div className="container">
                     <div className="flex flex-wrap md:flex-nowrap items-center justify-between  ">
                         <div className=" max-w-[717px] flex flex-col items-start  justify-between gap-4">
                             <h2 className="text-[28px] sm:text-[70px] font-bold leading-[42px] sm:leading-[96px] font-[Geologica]">Design That Thinks. Interfaces That Feel.</h2>
-                            <p className="max-w-[665px] text-base sn:text-lg leading-[25px] sm:leading-[30px] font-[Inter]">At ZeeFrames, we craft AI-ready design systems for modern software responsive, scalable, and human-centered.</p>
+                            <p className="max-w-[665px] text-base sm:text-lg leading-[25px] sm:leading-[30px] font-[Inter]">At ZeeFrames, we craft AI-ready design systems for modern software responsive, scalable, and human-centered.</p>
                             <Button
-                                path="#"
+                                path="/contact"
                                 className="mt-5 bg-[#F3FE00] text-[#000] hover:bg-transparent hover:text-[#F3FE00] border border-[#F3FE00] "
                                 hovertext="Let's Talk"
                                 defaulttext="See AI in Action"
@@ -57,7 +58,7 @@ export default function Home() {
                 </a>
             </div>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"></link>
-            <CursorGlow className="relative min-h-screen bg-[#0a0a0a] text-white" />
+
 
         </>
     )

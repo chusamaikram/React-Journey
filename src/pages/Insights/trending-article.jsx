@@ -98,7 +98,7 @@ export default function TrendingArticle() {
                                 </div>
                             </aside>
                         </div>
-                        <div className="grid gap-15 ">
+                        <div className="grid gap-12 ">
                             {TrendingInsight.map(card => (
                                 <Link key={card.id} to={card.path} >
                                     <div className={`grid grid-cols-1 sm:grid-cols-2  items-center rounded-[12px] sm:h-[218px] sm:h-auto border border-white/20 backdrop-blur `}>

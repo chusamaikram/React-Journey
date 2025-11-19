@@ -24,7 +24,7 @@ export default function AboutSection() {
     ]
     return (
         <>
-            <section className="bg-[#141414] py-8 sm:py-[80px]">
+            <section className="bg-[#0D0D0D] py-8 sm:py-[80px]">
                 <div className="container">
                     <div className="grid grid-cols-1 md:[grid-template-columns:minmax(100px,390px)_minmax(100px,771px)] items-start  gap-[80px]">
                         <div className=" max-w-[390px]">

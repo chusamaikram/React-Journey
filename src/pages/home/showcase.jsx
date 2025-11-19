@@ -23,12 +23,12 @@ develop excellently. And we care deeply about what we do."
                     <div className="  mt-15 py-10 px-8 border border-dashed border-[#343434] rounded-[20px] flex flex-col items-center justify-center gap-6">
                         <div className="flex flex-col items-center gap-4" >
                             <h3 className="text-[24px] font-semibold font-[Inter Tight]"> Your project here</h3>
-                            <p className="max-w-[494px] leading-normal text-[15px] text-[#F1F1F1] text-center font-[Inter Tight ] ">The proof is in our work. Check out <span>
-                                <Link to="#" className="  text-[#F3FE00] underline ">our case studies </Link> </span> to learn how our product development services can transform your business.</p>
+                            <p className="max-w-[494px] leading-[normal] text-[14px] text-[#F1F1F1] text-center font-[Inter Tight ] ">The proof is in our work. Check out <span>
+                                <Link to="/work" className="  text-[#F3FE00] underline ">our case studies </Link> </span> to learn how our product development services can transform your business.</p>
                         </div>
 
                         <Button
-                            path="#"
+                            path="/contact"
                             className="bg-[#F3FE00] text-[#000] hover:bg-[#000] hover:text-[#F3FE00] border border-[#F3FE00] "
                             hovertext="Let's talk"
                             defaulttext="Book a discovery call"

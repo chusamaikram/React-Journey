@@ -1,22 +1,23 @@
 import { ZeeFramesLogo, FooterMobile, America, Europe, SaudiArabia, Pakistan } from "../../assets/images/index";
 import { Link } from "react-router-dom";
 import { BeIcon, FbIcon, InstaIcon, LinkedlnIcon, WebIcon, Xicon } from "../../assets/svg";
+
 export default function Footer() {
     const FooterLinks = [
         {
             id: 1,
             title: "Company",
-            links: ['Home', 'About', 'Services', 'Work', 'Insights'],
+            links: [{ title: 'Home', path: "/" }, { title: 'About', path: "/about" }, { title: 'Services', path: "/services" }, { title: 'Work', path: "/work" }, { title: 'Insights', path: "/insights" }],
         },
         {
             id: 2,
             title: "Services",
-            links: ['UX UI Design', 'UX Research', 'Design System', 'Web App Design', 'Mobile App Design'],
+            links: [{ title: 'UX UI Design', path: "/services/ui-ux-design" }, { title: 'UX Research', path: "/services/ux-research-insights" }, { title: 'Design System', path: "/services/design-system-guidelines" }, { title: 'Webflow Development', path: "/services/webflow-development" }, { title: 'Bubble App Development', path: "/services/bubble-app-development" }],
         },
         {
             id: 3,
             title: "Reviews",
-            links: ['Clutch (4.8)', 'Good Firms (4.9)', 'Webflow (4.7)', 'Dribbble (4.8)'],
+            links: [{ title: 'Clutch (4.8)' }, { title: 'Good Firms (4.9)' }, { title: 'Webflow (4.7)' }, { title: 'Dribbble (4.8)' }],
         },
 
     ]
@@ -96,7 +97,7 @@ export default function Footer() {
     ]
     return (
         <>
-            <footer className="py-8 ">
+            <footer className="relative z-20  py-8 border-t border-[#2A2A2A]">
                 <div className="container">
                     <img src={ZeeFramesLogo} alt="ZeeFrames Logo"
                         className=" hidden sm:block max-w-full h-auto"
@@ -107,28 +108,28 @@ export default function Footer() {
                         className=" block sm:hidden max-w-full h-auto"
                         width={328}
                         height={47} />
-                    <div className="pt-8 pb-8.5 flex flex-col sm:flex-row items-start gap-8 sm:gap-[101px]">
-                        <p className="w-auto sm:w-[393px] text-lg leading-[27px] text-left text-[#BDBDBD] font-[Inter]">We transform ideas into user-centered digital experiences for businesses worldwide, from Fortune 500s to startups, using Figma, Webflow, and no-code solutions.</p>
-                        <div className="flex flex-wrap items-start gap-6 sm:gap-[48px]">
-                            {FooterLinks.map(item => (
-                                <div id={item.id}
-                                    className="w-[140px] sm:w-[160px] flex flex-col items-start gap-5 font-['Inter_Tight']">
-                                    <h2 className="text-base font-semibold leading-[20px] text-[#FFFFFF]">{item.title}</h2>
-                                    <ul className="flex flex-col items-start gap-3.5">
-                                        {item.links.map((link, i) => (
-                                            <li id={i} >
-                                                <Link
-                                                    className="text-[15px] leading-[20px] text-[#BDBDBD] hover:text-[#FFFFFF] font-[Inter Tight]"
-                                                    to="#">{link}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-
-                            ))}
-
+                    <div className="pt-8 pb-8.5 grid grid-cols-2 md:grid-cols-[minmax(200px,1fr)_minmax(110px,216px)_minmax(110px,216px)_minmax(110px,216px)] items-start gap-12">
+                        <div className="col-span-2 md:col-span-1" >
+                            <p className="text-lg leading-[27px] text-left text-[#BDBDBD] font-[Inter]">We transform ideas into user-centered digital experiences for businesses worldwide, from Fortune 500s to startups, using Figma, Webflow, and no-code solutions.</p>
                         </div>
+                        {FooterLinks.map(item => (
+                            <div id={item.id}
+                                className=" flex flex-col items-start gap-5 font-['Inter_Tight']">
+                                <h2 className="text-base font-semibold leading-[20px] text-[#FFFFFF]">{item.title}</h2>
+                                <ul className="flex flex-col items-start gap-3.5">
+                                    {item.links.map((link, i) => (
+                                        <li id={i} className="" >
+                                            <Link
+                                                className="text-[15px] leading-[20px] text-[#8F8F8F] hover:text-[#FFFFFF] font-[Inter Tight]"
+                                                to={link.path}>
+                                                {link.title}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                        ))}
                     </div>
                     <div className="grid sm:grid-cols-4 items-start gap-4 p-6 bg-[#1A1A1A]">
                         {Address.map(item => (
@@ -138,9 +139,9 @@ export default function Footer() {
                                     width={32}
                                     height={24}
                                 />
-                                <h3 className="mt-[6px] text-lg font-medium font-[Inter Tight] text-[#FFFFFF]">{item.title}</h3>
-                                <a href={item.addresslink} className="text-[14px] line-clamp-2 leading-[22px] font-[Inter Tight] text-[#8E8E8E]" target="_blank">{item.address}</a>
-                                <a href={`tel:${item.phone}`} className="text-base leading-[22px] font-medium font-[Inter Tight] text-[#E1E1E1]">{item.phone}</a>
+                                <h3 className="mt-[6px] text-[24px] font-medium font-[Inter Tight] text-[#FFFFFF]">{item.title}</h3>
+                                <a href={item.addresslink} className="text-[14px] leading-[22px] font-[Inter Tight] text-[#8E8E8E]" target="_blank">{item.address}</a>
+                                <a href={`tel:${item.phone}`} className="text-sm leading-[20px] font-medium font-[Inter Tight] text-[#E1E1E1]">{item.phone}</a>
                             </div>
                         ))}
 
@@ -163,7 +164,7 @@ export default function Footer() {
                 </div>
 
             </footer>
-            
+
         </>
     )
 }

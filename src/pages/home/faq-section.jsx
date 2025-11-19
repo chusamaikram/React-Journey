@@ -1,32 +1,12 @@
 import Button from "../../components/common/button";
-import { ClutchLogo, MiniStar, HalfStar, PlusIcon, MinusIcon } from "../../assets/svg"
+import { PlusIcon, MinusIcon } from "../../assets/svg"
+import ClutchRatings from "../../assets/svg/clutch-ratings.svg"
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
 
 export default function FaqSection() {
-    const Star = [
-        {
-            id: 1,
-            img: <MiniStar />,
-        },
-        {
-            id: 2,
-            img: <MiniStar />,
-        },
-        {
-            id: 3,
-            img: <MiniStar />,
-        },
-        {
-            id: 4,
-            img: <MiniStar />,
-        },
-        {
-            id: 5,
-            img: <HalfStar />,
-        },
-    ]
+
     const [activeIndex, setActiveIndex] = useState(0);
 
     const handletogle = (index) => {
@@ -66,20 +46,20 @@ export default function FaqSection() {
     return (
         <>
             <section className="above-glow  hidden sm:block py-[80px]">
-                <div className="container">
+                <div className="container ">
                     <div className="flex flex-col lg:flex-row items-start justify-between gap-12 ">
-                        <div className="max-w-[409px] flex flex-col items-start gap-8 font-[Geologica] ">
+                        <div className="max-w-[414px] w-full flex flex-col items-start gap-8 font-[Geologica] ">
                             <span className="text-[#F3FE00] text-sm uppercase">FAQs</span>
                             <div className="flex flex-col items-start gap-3">
                                 <h2 className="text-[40px] leading-[40px] font-bold uppercase ">Got Question?</h2>
-                                <p className="text-[#BDBDBD] text-sm leading-[21px] font-['Inter_Tight'] ">We begin with meaningful conversations that drive design decisions.</p>
+                                <p className="max-w-[408px] text-[#BDBDBD] text-sm leading-[21px] font-['Inter_Tight'] ">We begin with meaningful conversations that drive design decisions.</p>
                             </div>
 
                             <div className="flex items-start justify-between gap-8">
                                 <div className="w-[220px]">
                                     <Button
                                         className="w-full text-black bg-white hover:bg-transparent hover:text-[#F3FE00] border border-white hover:border-[#F3FE00]"
-                                        path='#'
+                                        path='/contact'
                                         hovertext="Let's Talk "
                                         defaulttext="Book a free call"
                                         showicon={true}
@@ -88,21 +68,7 @@ export default function FaqSection() {
                                 </div>
 
                                 <Link to="#" className="flex items-start gap-4">
-                                    <ClutchLogo />
-                                    <div className="flex flex-col items-start gap-1.5">
-                                        <ul className="flex items-center justify-between">
-                                            {Star.map(item => (
-                                                <li key={item.id}>
-                                                    {item.img}
-                                                </li>
-                                            ))}
-
-                                        </ul>
-                                        <p className="text-sm leading-[21px] text-[#D3D3D3] font-['Inter_Tight']">Rating 5,20 reviews</p>
-
-
-                                    </div>
-
+                                    <img src={ClutchRatings} alt="clutch-logo" width={166} height={47} />
                                 </Link>
                             </div>
                         </div>
@@ -119,8 +85,8 @@ export default function FaqSection() {
                                         </span>
                                     </button>
                                     <div
-                                        className={`overflow-hidden mt-2 transition-all duration-500 ${activeIndex === index ? "max-h-[500px]" : "max-h-0"}`}>
-                                        <p className="text-base leading-[24px] text-[#E7E7E7] opacity-[0.6]">
+                                        className={`overflow-hidden  transition-all duration-500 ${activeIndex === index ? "max-h-[500px]" : "max-h-0"}`}>
+                                        <p className="mt-2 text-base leading-[24px] text-[#E7E7E7] opacity-[0.6]">
                                             {item.answer}
                                         </p>
                                     </div>

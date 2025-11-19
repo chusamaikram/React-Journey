@@ -6,8 +6,11 @@ import ShareIcon from "../../../assets/svg/share-icon.svg"
 import TrendingArticleImg from "../../../assets/images/trending-article.png"
 import RecentArticles from "../recent-articles"
 import ContactUs from "../../home/contact-us"
+import useTitle from "../../../components/common/page-title"
 
 export default function InsightDetail() {
+ useTitle("Insights | Zeeframes")
+
     const Trending = [
         {
             id: 1,
@@ -50,29 +53,29 @@ export default function InsightDetail() {
     return (
         <>
             <article>
-                <section className="py-8 sm:py-25">
+                <section className="py-8 sm:py-25 bg-[linear-gradient(0deg,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0)_79.98%)] ">
                     <div className="container">
-                        <div className="flex flex-col items-start gap-10 ">
+                        <div className="flex flex-col items-start">
                             <div className="text-[#CDCDCD]">
-                                <p className=" text-base sm:text-lg font-[Inter] leading-[24px] mb-6">posted by: Admin</p>
+                                <p className=" text-base sm:text-lg font-[Inter] leading-[24px] mb-6">Posted by: Admin</p>
                                 <h1 className="w-full text-white text-[32px] sm:text-[48px] leading-[44px] sm:leading-[58px] font-semibold font-[Geologica]">How Thinking Like a Product Designer Changed My Design Handoffs</h1>
-                                <p className=" text-[20px] mt-5 leading-[24px] font-[Inter] text-[#CDCDCD]">Five lessons I've learned about deliverables that Junior Designer Me could’ve never imagined.</p>
+                                <p className="text-base mt-5 leading-[24px] font-[Inter] text-[#CDCDCD]">Five lessons I've learned about deliverables that Junior Designer Me could’ve never imagined.</p>
                             </div>
-                            <div className="py-5 flex items-center justify-between w-full ">
+                            <div className=" px-3 py-[19px] border-t border-b border-[#252525]  mt-8  flex items-center justify-between w-full ">
                                 <div className=" flex items-center justify-start gap-2 text-[#CDCDCD] text-lg font-[Inter] leading-[normal] ">
                                     <span >7 min read</span>
                                     <div className="w-[6px] h-[6px] bg-[#4D4C4C] rounded-full"></div>
                                     <time datetime="Jan 23, 2025">Jan 23, 2025</time>
                                 </div>
-                                <button className="w-[83px] cursor-pointer h-[32px] rounded-[29px] py-1.5 px-3 border border-[#252525] font-[Inter] flex items-center justify-center gap-1.5 text-[#CDCDCD]">
+                                <button className=" cursor-pointer font-[Inter] flex items-center justify-center gap-1.5 text-[#CDCDCD]">
                                     <img src={ShareIcon} alt="icon" width={20} />
-                                    <span>Share</span>
+                                    <span className="text-[12px]">Share</span>
                                 </button>
 
 
                             </div>
                         </div>
-                        <div className=" mt-15 w-full overflow-hidden">
+                        <div className="pt-[66px] pb-8 sm:pb-25 w-full overflow-hidden">
                             <img className="max-w-full h-auto object-contain" src={Insight} alt="insight thumbnail" width={1210} height={539} />
                         </div>
                     </div>
@@ -107,8 +110,8 @@ export default function InsightDetail() {
                                 </div>
                                 <h3 className="text-lg font-medium font-[Poppins] ">Best practices for working with big data tables</h3>
                                 <p className="text-base text-left leading-[24px]">Designing tables for large datasets is a whole different story. Big data tables need optimized designs and smart interactions to make sure users can navigate and analyze data efficiently. Here are some best practices to keep in mind when working with big data tables:</p>
-                                <h3 className="text-lg font-medium font-[Poppins] mt-3 ">1. Enable advanced sorting and filtering</h3>
-                                <p className="text-base text-left leading-[24px] -mt-2 mb-3">When you’re working with big data sets, it’s important to have effective ways to sift through all that information. Sorting and filtering are key tools for helping users find relevant data quickly.</p>
+                                <h3 className="text-lg font-medium font-[Poppins] mt-2  ">1. Enable advanced sorting and filtering</h3>
+                                <p className="text-base text-left leading-[24px]  ">When you’re working with big data sets, it’s important to have effective ways to sift through all that information. Sorting and filtering are key tools for helping users find relevant data quickly.</p>
                                 <ul className="flex flex-col items-start list-disc ml-4">
                                     <li className="text-base text-left leading-[24px]"> <span className="font-semibold">Multi-level sorting:</span> Let users sort by multiple columns at the same time. For instance, users might want to sort first by department, then by revenue and then by date.
                                     </li>

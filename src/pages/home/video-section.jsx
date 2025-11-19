@@ -1,6 +1,7 @@
 import { useState } from "react";
 import mainvideo from "../../assets/videos/mainvideo.mp4";
 import { ArrowIcon } from "../../assets/svg";
+import { Link } from "react-router-dom";
 
 export default function VideoSection() {
     const [pos, setPos] = useState({ x: 0, y: 0 });
@@ -35,7 +36,8 @@ export default function VideoSection() {
             ></video>
 
             {visible && (
-                <button
+                <Link
+                to="/work"
                     className=" absolute z-10 bg-white text-black font-semibold px-6 py-3 rounded-full transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-400 ease-out cursor-pointer flex items-center justify-center gap-3"
                     style={{
                         left: `${pos.x}px`,
@@ -44,7 +46,7 @@ export default function VideoSection() {
                 >
                     All  Works
                     <ArrowIcon />
-                </button>
+                </Link>
             )}
         </section>
     );

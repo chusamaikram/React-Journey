@@ -54,10 +54,13 @@ export default function ShowcaseCard() {
                 {CardsData.map(item => (
                     <Link to={item.path} key={item.id} className={`${item.id % 2 === 0 ? 'sm:mt-[120px]' : 'mt-0'}`}>
                         <div className="w-full flex flex-col items-start justify-center gap-8">
-                            <img className="max-w-full h-full rounded-6" src={item.img} alt={item.title} loading="lazy"
-                                width={600}
-                                height={685}
-                            />
+                            <div className="overflow-hidden">
+                                <img className="max-w-full h-full object-cover rounded-6" src={item.img} alt={item.title} loading="lazy"
+                                    width={600}
+                                    height={685}
+                                />
+                            </div>
+
                             <div className="flex flex-col items-start gap-2.5 font-['Inter_Tight'] ">
                                 <h3 className="text-[28px] font-semibold ">{item.title}</h3>
                                 <p className="text-base leading-[25px] " >{item.desc}</p>

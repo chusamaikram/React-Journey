@@ -39,7 +39,7 @@ const MissionCard=[
 
     return (
         <>
-            <section className="bg-[#141414] py-8 sm:py-[80px]">
+            <section className="bg-[#0D0D0D] py-8 sm:py-[80px]">
                 <div className="container">
                     <div className="max-w-[981px]">
                         <span className="text-sm text-[#F3FE00] font-[Geologica] uppercase">Our Mission</span>
