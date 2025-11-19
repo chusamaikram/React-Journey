@@ -140,8 +140,8 @@ export default function Footer() {
                                     height={24}
                                 />
                                 <h3 className="mt-[6px] text-[24px] font-medium font-[Inter Tight] text-[#FFFFFF]">{item.title}</h3>
-                                <a href={item.addresslink} className="text-[14px] leading-[22px] font-[Inter Tight] text-[#8E8E8E]" target="_blank">{item.address}</a>
-                                <a href={`tel:${item.phone}`} className="text-sm leading-[20px] font-medium font-[Inter Tight] text-[#E1E1E1]">{item.phone}</a>
+                                <a href={item.addresslink} className="text-[14px] leading-[22px] font-[Inter Tight] text-[#8E8E8E]" aria-label="address link" target="_blank">{item.address}</a>
+                                <a href={`tel:${item.phone}`} className="text-sm leading-[20px] font-medium font-[Inter Tight] text-[#E1E1E1]" aria-label="contact number">{item.phone}</a>
                             </div>
                         ))}
 
@@ -152,7 +152,7 @@ export default function Footer() {
                         <ul className="flex items-center gap-[16px]">
                             {SocialLinks.map(item => (
                                 <li key={item.id}>
-                                    <a href={item.path} target="_blank">
+                                    <a href={item.path} aria-label="social links" target="_blank">
                                         {item.img}
                                     </a>
                                 </li>

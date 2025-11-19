@@ -14,10 +14,10 @@ import { useRef, useState } from 'react';
 const RecentBlog = ({ title, desc, path, className, img, readtime, date }) => {
     return (
         <>
-            <Link to={path} >
+            <Link to={path} aria-label="navigation to detail page" >
                 <div className={`flex flex-col items-center max-w-[381] backdrop-blur  ${className}`}>
                     <div className="overflow-hidden rounded-[16px_16px_0_0] ">
-                        <img className=" w-full object-cover" src={img} alt="thumbnail" width={382} height={246} />
+                        <img className=" w-full object-cover" src={img} alt="thumbnail" width={382} height={246} loading="lazy" />
                     </div>
                     <div className="p-6 border border-white/20 w-full bg-white/8  rounded-[0_0_16px_16px]">
                         <div className="  flex flex-col items-start gap-3">
@@ -86,34 +86,6 @@ export default function RecentArticles() {
     return (
         <>
 
-            {/* <section className="py-8 sm:py-[80px]">
-                <div className="container">
-                    <div className="mb-8 sm:mb-9 flex flex-col sm:flex-row items-start sm:items-center justify-between">
-                        <Heading className="items-start justify-start gap-3" title="Latest insights" secHeading="Our Recent Articles" />
-                        <div className="flex items-center gap-3">
-                            <button className="h-[48px] w-[68px] opacity-30 rounded-full bg-white flex item-center justify-center px-5">
-                                <img src={ArrowLeft} alt="arrow-left" />
-                            </button>
-                            <button className="h-[48px] w-[68px] rounded-full bg-white flex item-center justify-center px-5">
-                                <img src={ArrowRight} alt="arrow-right" />
-                            </button>
-                        </div>
-                    </div>
-                    <div className="overflow-hidden">
-                        <div className="flex items-center ">
-                            {LatestInsight.map(item => (
-                                <div key={item.id} className="w-[386px] mr-[25px]">
-                                    <RecentBlog title={item.title}
-                                        desc={item.desc}
-                                        path={item.path}
-                                        img={item.img}
-                                        readtime={item.readtime}
-                                        date={item.date} />
-                                </div>))}
-                        </div>
-                    </div>
-                </div>
-            </section> */}
             <section className="py-8 sm:py-[80px]">
                 <div className="container">
                     <div className="mb-8 sm:mb-9 flex flex-col sm:flex-row items-start sm:items-center justify-between">
@@ -128,8 +100,9 @@ export default function RecentArticles() {
                                 disabled={isBeginning}
                                 className={`h-[48px] w-[68px] rounded-full bg-[#F3FE00] flex items-center justify-center px-5 ${isBeginning ? "opacity-20 cursor-not-allowed" : ""
                                     }`}
+                                    aria-label="slider button"
                             >
-                                <img src={ArrowLeft} alt="arrow-left" />
+                                <img src={ArrowLeft} alt="arrow-left" loading="lazy" />
                             </button>
 
                             <button
@@ -137,13 +110,14 @@ export default function RecentArticles() {
                                 disabled={isEnd}
                                 className={`h-[48px] w-[68px] rounded-full bg-[#F3FE00] flex items-center justify-center px-5 ${isEnd ? "opacity-20 cursor-not-allowed" : ""
                                     }`}
+                                    aria-label="slider button"
                             >
-                                <img src={ArrowRight} alt="arrow-right" />
+                                <img src={ArrowRight} alt="arrow-right" loading="lazy" />
                             </button>
                         </div>
                     </div>
 
-                    {/* Slider Section */}
+                    
                     <div className="overflow-hidden">
                         <Swiper
                             onSwiper={(swiper) => (swiperRef.current = swiper)}

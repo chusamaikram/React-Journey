@@ -82,18 +82,18 @@ export default function AboutUs() {
                                     <h3 className='text-base sm:text-lg font-semibold leading-[21px] font-[Inter] flex items-center gap-2.5'>
                                         {Items.heading}
                                         {index == 1 && (<div className='flex items-center gap-1.5'>
-                                            <img src={Items.flag1} alt="flag" />
-                                            <img src={Items.flag2} alt="flag" />
+                                            <img src={Items.flag1} alt="flag icon" width={22} height={16} />
+                                            <img src={Items.flag2} alt="flag icon" width={22} height={16} />
 
 
                                         </div>)}
                                         {index == 3 && (<div className='flex items-center gap-1.5'>
-                                            <img src={Items.flag1} alt="flag" />
+                                            <img src={Items.flag1} alt="flag icon" width={22} height={16} />
 
                                         </div>)}
 
                                     </h3>
-                                    <a href={Items.path}>
+                                    <a href={Items.path} aria-label='ratings' >
                                         <div className='px-1.5 py-1 border border-[#3F3F3F] rounded-full flex items-center gap-1.5'>
                                             <div className='px-2 py-1 rounded-full bg-white'>{Items.icon}</div>
                                             <span className="text-[14px] font-[Inter] leading-[16px] text-[#CACACA]"> {Items.review}</span>
@@ -114,7 +114,7 @@ export default function AboutUs() {
             </section>
 
             <section className='sm:sticky sm:top-0 z-[-1]' >
-                <img className='object-cover w-full h-auto' src={AboutBg} alt="thumbnail" width={1440} height={677} />
+                <img className='object-cover w-full h-auto' src={AboutBg} alt="thumbnail" loading='lazy' width={1440} height={677} />
             </section>
 
             <AboutSection />

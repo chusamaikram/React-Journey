@@ -95,7 +95,7 @@ export default function CultureSection() {
                     <div className="team-slider mt-16 flex items-center justify-between gap-2">
                         {Team.map((item, index) => (
                             <div key={index} className="grow shrink-0">
-                                <img className="w-full h-auto object-cover grayscale" src={item.img} alt={item.name} width={282} height={360} />
+                                <img className="w-full h-auto object-cover grayscale" src={item.img} alt={item.name} loading="lazy" width={282} height={360} />
 
                             </div>
                         ))}

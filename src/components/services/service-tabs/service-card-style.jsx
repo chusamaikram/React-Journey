@@ -10,7 +10,8 @@ export default function CommonCard({ path, icon, heading, desc }) {
                 (pathname.includes(path) && path !== "/")
                 ? "bg-[#F3FE0014]"
                 : ""
-                }`}>
+                }`} 
+                aria-label="service card">
                 <div className="w-[24px] h-[24px]">{icon}</div>
                 <div className="flex flex-col items-start  gap-1 font-[Inter]">
                     <h3 className="text-base leading-[24px] font-semibold  ">{heading}</h3>

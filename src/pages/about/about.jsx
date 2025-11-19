@@ -28,7 +28,7 @@ export default function AboutSection() {
                 <div className="container">
                     <div className="grid grid-cols-1 md:[grid-template-columns:minmax(100px,390px)_minmax(100px,771px)] items-start  gap-[80px]">
                         <div className=" max-w-[390px]">
-                            <img className="object-cover w-full h-auto object-cover"  src={image} alt="about thumbnail" width={390} height={392} />
+                            <img className="object-cover w-full h-auto object-cover"  src={image} alt="about thumbnail" loading="lazy" width={390} height={392} />
                         </div>
                         <div className="">
                             <div className="max-w-[570px]">

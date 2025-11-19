@@ -100,10 +100,10 @@ export default function TrendingArticle() {
                         </div>
                         <div className="grid gap-12 ">
                             {TrendingInsight.map(card => (
-                                <Link key={card.id} to={card.path} >
+                                <Link key={card.id} to={card.path} aria-label="navigation to detail page" >
                                     <div className={`grid grid-cols-1 sm:grid-cols-2  items-center rounded-[12px] sm:h-[218px] sm:h-auto border border-white/20 backdrop-blur `}>
                                         <div className="overflow-hidden rounded-[12px_12px_0_0] sm:rounded-[12px_0_0_12px]">
-                                            <img className="w-full h-full object-cover" src={card.img} alt="thumbnail" width={295} height={218} />
+                                            <img className="w-full h-full object-cover" src={card.img} alt="thumbnail" width={295} height={218} loading="lazy" />
                                         </div>
                                         <div className="h-full  p-4 sm:p-[16px_16px_16px_28px]  bg-white/8  rounded-[0_0_12px_12px] sm:rounded-[0_12px_12px_0] flex flex-col items-start gap-3">
                                             <h3 className="text-[19px] font-[Geologica] font-semibold leading-[normal] ">{card.title}</h3>

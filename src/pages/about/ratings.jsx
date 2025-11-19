@@ -36,7 +36,7 @@ export default function RatingsSection() {
                 <div className="container">
                     <div className="flex flex-col sm:flex-row items-center justify-center  gap-6 sm:gap-18">
                         {RatingCards.map(card => (
-                            <a className="max-w-full flex flex-col items-start gap-3" key={card.id} href={card.link} target="_blank">
+                            <a className="max-w-full flex flex-col items-start gap-3" key={card.id} href={card.link} target="_blank" aria-label="ratings" >
 
                                 <div className="flex items-center justify-between sm:justify-center gap-3">
                                     <p className="text-[#CACACA] text-base leading-[16px] font-[Inter]">Reviewed on</p>

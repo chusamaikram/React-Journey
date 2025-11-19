@@ -32,7 +32,7 @@ export default function Header() {
       <header className="sticky top-0 z-9999 py-[22px] max-h-[94px] bg-[#0D0D0D]">
         <div className="container">
           <nav className="flex items-center justify-between">
-            <Link to="/">
+            <Link to="/" aria-label="zeeframes logo">
               <img src={logo} alt="logo" width={179} height={36} />
             </Link>
 
@@ -89,21 +89,19 @@ export default function Header() {
             </ul>
 
             <div className="flex items-center gap-3">
-              <button className="p-1 bg-white rounded-[12px] sm:rounded-[16px] w-[38px] sm:w-[52px] h-[24px] sm:h-[32px] cursor-pointer relative">
+              <button className="p-1 bg-white rounded-[12px] sm:rounded-[16px] w-[38px] sm:w-[52px] h-[24px] sm:h-[32px] cursor-pointer relative" aria-label="theme toggler">
                 <div className="w-[20px] sm:w-[26px] h-[20px] sm:h-[26px] bg-black rounded-full absolute left-[3px] top-[3px] flex items-center justify-center">
                   <svg className="w-[12px] sm:w-[16px]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M10.0192 1.65965C9.43727 1.47632 8.93987 2.11231 9.24834 2.63898C9.73567 3.46964 9.99834 4.40698 9.99834 5.34698C9.99834 8.29231 7.61054 10.6803 4.665 10.6803C4.1104 10.6803 3.54947 10.5903 3.04 10.4303C2.45807 10.247 1.9398 10.883 2.24834 11.4096C3.43334 13.431 5.59914 14.6803 7.99834 14.6803C11.6802 14.6803 14.665 11.6956 14.665 8.01364C14.665 5.07965 12.7713 2.52498 10.0192 1.65965ZM11.0817 3.65965C12.4577 4.63231 13.3317 6.23565 13.3317 8.01364C13.3317 10.959 10.9439 13.347 7.99834 13.347C6.64627 13.347 5.4104 12.827 4.45667 11.9723C4.5278 11.9743 4.59414 12.0136 4.665 12.0136C8.34694 12.0136 11.3317 9.02897 11.3317 5.34698C11.3317 4.77565 11.2303 4.21031 11.0817 3.65965Z" fill="white"></path>
                   </svg>
                 </div>
-
-
               </button>
               <Button
 
                 path="/contact" hovertext={" Let's talk"} defaulttext={"Work with us"}
                 className="header-btn  max-w-[190px] w-full border border-[#f3fe00] bg-[#f3fe00] transition-[background-color,border-color] duration-500 ease-in-out hover:bg-black text-black hover:text-[#f3fe00] "
               />
-              <button className="block lg:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <button className="block lg:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="humbergur " >
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M10 5H20" stroke="white" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
                   <path d="M4 12H20" stroke="white" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />

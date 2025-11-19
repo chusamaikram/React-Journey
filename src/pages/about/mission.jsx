@@ -51,7 +51,7 @@ const MissionCard=[
                         <div className="grid grid-cols-1 sm:grid-cols-2 mx-auto sm:mx-0 items-start gap-12 sm:gap-18 ">
                             {MissionCard.map((item, index) => (
                                 <div key={index} className="w-[220px] h-[147px] flex flex-col justify-end relative">
-                                    <img className="absolute top-0 right-[26px] z-1" src={item.img} alt="" width={item.width} height={item.height} />
+                                    <img className="absolute top-0 right-[26px] z-1" src={item.img} alt={item.title} width={item.width} height={item.height} loading="lazy" />
                                     <h2 className=" z-2 text-[60px] font-[Inter] font-bold text-[#F3FE00] w-full">{item.count}</h2>
                                     <p className=" z-2 text-[24px] text-[#C2C2C2] font-[Inter]">{item.title}</p>
                                 </div>

@@ -38,7 +38,8 @@ export default function Home() {
                         <div className="">
                             <img className="h-auto object-contain" src={SpinningStar} alt="Spinning star"
                                 width={430}
-                                height={430} />
+                                height={430}
+                                loading="lazy" />
                         </div>
                     </div>
                 </div>
@@ -51,13 +52,13 @@ export default function Home() {
 
 
             <div className="floating_btn">
-                <a target="_blank" href="https://wa.me/">
+                <a target="_blank" href="https://wa.me/" aria-label="whatsapp link">
                     <div className="contact_icon">
                         <i className="fa fa-whatsapp my-float"></i>
                     </div>
                 </a>
             </div>
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"></link>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" aria-label=" whatsapp btn style"></link>
 
 
         </>

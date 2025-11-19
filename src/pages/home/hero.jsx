@@ -134,9 +134,9 @@ export default function HeroSection() {
                 <div className="container">
                     <div className="relative ">
 
-                        <img className="absolute z-0 top-0 -left-[65px] hidden sm:block blur-[30px]" src={bg1} alt="" />
-                        <img className="hidden sm:block  absolute z-0 top-[150px] sm:top-0 -left-[20px] sm:left-[65px] " src={bg2} alt="" />
-                        <img className="absolute z-0 -top-[15px] -right-[60px] blur-[30px] hidden sm:block opacity-[0.8]" src={bg3} alt="" />
+                        <img className="absolute z-0 top-0 -left-[65px] hidden sm:block blur-[30px]" src={bg1} alt="glow " />
+                        <img className="hidden sm:block  absolute z-0 top-[150px] sm:top-0 -left-[20px] sm:left-[65px] " src={bg2} alt="glow" />
+                        <img className="absolute z-0 -top-[15px] -right-[60px] blur-[30px] hidden sm:block opacity-[0.8]" src={bg3} alt="glow" />
                         <StarIcon1 />
                         <StarIcon2 />
                         {/* <img className="w-[47px] sm:w-full absolute z-1 top-[330px] sm:top-[380px] left-0 sm:left-[65px]" src={HeroStar} alt="star icon" width={73} height={80} /> */}

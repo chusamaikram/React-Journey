@@ -67,15 +67,15 @@ export default function FaqSection() {
                                     />
                                 </div>
 
-                                <Link to="#" className="flex items-start gap-4">
-                                    <img src={ClutchRatings} alt="clutch-logo" width={166} height={47} />
-                                </Link>
+                                <a href="#" className="flex items-start gap-4" aria-label="clutch ratings">
+                                    <img src={ClutchRatings} alt="clutch logo" width={166} height={47} loading="lazy" />
+                                </a>
                             </div>
                         </div>
                         <div className=" w-full flex-grow flex flex-col items-start justify-center gap-4 font-['Inter_Tight']">
                             {FaqCards.map((item, index) => (
                                 <div key={index} className={` w-full p-5  bg-[rgba(255, 255, 255, 0.04)] border  transition-all duration-500 ${activeIndex === index ? "border-[#F3FE00]" : "border-[#3C3C3C]"}  rounded-[12px]`}>
-                                    <button className=" w-full bg-transparent border-none cursor-pointer flex items-center justify-between" onClick={() => handletogle(index)}>
+                                    <button className=" w-full bg-transparent border-none cursor-pointer flex items-center justify-between" onClick={() => handletogle(index)} aria-label="accordian btn">
                                         <span className="flex-grow text-base font-medium text-white text-start"> {item.question}</span>
                                         <span className={`w-[24px] h-[24px] border  rounded-[6px]  ${activeIndex === index ? "border-[#F3FE00] bg-[#F3FE00]" : "border-[#3C3C3C] bg-[#3C3C3C]"}  p-1`}>
                                             {activeIndex === index ?

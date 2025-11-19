@@ -72,7 +72,7 @@ export default function ServicePage({
 
                                     <li key={item.id} className={`flex items-start gap-3 `}>
                                         <div className="w-[24px] h-[24px] p-[5px] flex items-center justify-center ">
-                                            <img className="w-full h-full" src={Icon} alt="icon" width={14} />
+                                            <img className="w-full h-full" src={Icon} alt="strategy icon" width={14} />
                                         </div>
                                         <p className="text-[12px] leading-[21px] font-medium">{item.title}</p>
                                     </li>

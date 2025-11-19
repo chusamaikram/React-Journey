@@ -52,7 +52,7 @@ export default function ShowcaseCard() {
         <>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 row-gap-12">
                 {CardsData.map(item => (
-                    <Link to={item.path} key={item.id} className={`${item.id % 2 === 0 ? 'sm:mt-[120px]' : 'mt-0'}`}>
+                    <Link to={item.path} key={item.id} className={`${item.id % 2 === 0 ? 'sm:mt-[120px]' : 'mt-0'}`} aria-label="work navigation" >
                         <div className="w-full flex flex-col items-start justify-center gap-8">
                             <div className="overflow-hidden">
                                 <img className="max-w-full h-full object-cover rounded-6" src={item.img} alt={item.title} loading="lazy"

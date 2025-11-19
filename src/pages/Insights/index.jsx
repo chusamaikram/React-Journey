@@ -45,12 +45,12 @@ export default function Insights() {
 
             <section className="py-8 sm:py-[80px] relative">
                 <div class="absolute z-1 left-6 bottom-0">
-                    <img src={Elipse} alt="ellipse" width={1440} height={180} />
+                    <img src={Elipse} alt="ellipse" width={1440} height={180} loading="lazy" />
                 </div>
                 <div className="container">
                     <div className="relative z-2 grid grid-cols-1 md:grid-cols-[588px_1fr] items-center gap-x-12 gap-y-8 " >
 
-                        <img className="object-cover w-full h-full rounded-[12px]" src={InsightsImg} alt="Insight Thumbnail" width={588} height={406} />
+                        <img className="object-cover w-full h-full rounded-[12px]" src={InsightsImg} alt="Insight Thumbnail" width={588} height={406} loading="lazy" />
 
                         <div className="flex flex-col items-start gap-3">
                             <h2 className="text-[28px] sm:text-[48px] font-[Geologica] leading-[normal] font-semibold w-full">How Thinking Like a Product Designer Changed My Design Handoffs</h2>

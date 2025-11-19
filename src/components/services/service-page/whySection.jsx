@@ -32,7 +32,7 @@ export default function WhySection({ heading, StrategyListing }) {
                         </div>
                         <div className="max-w-[502px] rounded-[24px]">
                             <div className=" h-auto relative overflow-hidden">
-                                <img className="w-full h-auto object-cover" src={StrategyThumbnail} alt="strategy thumbnail" width={502} height={405} />
+                                <img className="w-full h-auto object-cover" src={StrategyThumbnail} alt="strategy thumbnail" loading="lazy" width={502} height={405} />
                                 <a href="#" target="blank" aria-label="Ratings" className="p-3 absolute left-[34px] bottom-[49px] max-w-[222px] bg-white rounded-[12px] flex items-center gap-3">
                                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#121212" />

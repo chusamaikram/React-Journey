@@ -112,7 +112,7 @@ develop excellently. And we care deeply about what we do."
                                             desc={items.desc}
                                         />
                                         <div className="overflow-hidden block md:hidden">
-                                            <img className="object-cover w-full h-full rounded-4" src={items.img} alt="thumbnail" width={527} height={506} />
+                                            <img className="object-cover w-full h-full rounded-4" src={items.img} alt="thumbnail" width={527} height={506} loading="lazy"/>
                                         </div>
                                         </div>
 
@@ -122,7 +122,7 @@ develop excellently. And we care deeply about what we do."
                             </ul>
                         </div>
                         <div className="hidden md:block  sticky top-[20vh] h-['fit-content'] ">
-                            <img className="object-cover w-full rounded-4" src={activeImage} alt="process visuals" width={527} height={506} />
+                            <img className="object-cover w-full rounded-4" src={activeImage} alt="process visuals" width={527} height={506} loading="lazy" />
 
                         </div>
 

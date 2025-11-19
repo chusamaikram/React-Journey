@@ -68,7 +68,7 @@ export default function InsightDetail() {
                                     <time datetime="Jan 23, 2025">Jan 23, 2025</time>
                                 </div>
                                 <button className=" cursor-pointer font-[Inter] flex items-center justify-center gap-1.5 text-[#CDCDCD]">
-                                    <img src={ShareIcon} alt="icon" width={20} />
+                                    <img src={ShareIcon} alt="icon" width={20} loading="lazy" />
                                     <span className="text-[12px]">Share</span>
                                 </button>
 
@@ -76,7 +76,7 @@ export default function InsightDetail() {
                             </div>
                         </div>
                         <div className="pt-[66px] pb-8 sm:pb-25 w-full overflow-hidden">
-                            <img className="max-w-full h-auto object-contain" src={Insight} alt="insight thumbnail" width={1210} height={539} />
+                            <img className="max-w-full h-auto object-contain" src={Insight} alt="insight thumbnail" width={1210} height={539} loading="lazy" />
                         </div>
                     </div>
 
@@ -105,7 +105,7 @@ export default function InsightDetail() {
                                     Here are five lessons I've learned about deliverables that Junior Me could've never imagined.
                                 </p>
                                 <div className=" my-8 overflow-hidden">
-                                    <img className="w-full h-auto object-cover" src={Insight2} alt="" width={900} height={448} />
+                                    <img className="w-full h-auto object-cover" src={Insight2} alt="insight thumbnail" width={900} height={448} loading="lazy" />
 
                                 </div>
                                 <h3 className="text-lg font-medium font-[Poppins] ">Best practices for working with big data tables</h3>
@@ -124,9 +124,9 @@ export default function InsightDetail() {
                                 <h2 className="text-[24px] font-semibold font-[Poppins]">Trending Blogs</h2>
                                 <div className="mt-6 flex flex-col gap-5">
                                     {Trending.map(card => (
-                                        <Link key={card.id} to="/insights/insight-details" className="grid grid-cols-[104px_1fr] rounded-[16px] border border-white/20 bg-white/8 p-1.5 max-w-[341px] gap-3 backdrop-blur">
+                                        <Link key={card.id} to="/insights/insight-details" className="grid grid-cols-[104px_1fr] rounded-[16px] border border-white/20 bg-white/8 p-1.5 max-w-[341px] gap-3 backdrop-blur" aria-label="detail page navigation">
                                             <div className="overflow-hidden rounded-[12px]">
-                                                <img className="w-full h-full object-cover" src={card.img} alt="thumbnail" width={295} height={218} />
+                                                <img className="w-full h-full object-cover" src={card.img} alt="thumbnail" width={295} height={218} loading="lazy" />
                                             </div>
                                             <div className="flex flex-col items-start gap-3">
                                                 <span className="text-[12px] font-[Inter] leading-[normal]">ZeeFrames</span>

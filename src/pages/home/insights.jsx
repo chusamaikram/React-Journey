@@ -42,7 +42,7 @@ export default function InsightsSection() {
                             <h2 className="text-[28px] sm:text-[40px] text-center sm:text-start font-bold leading-[40px] sm:leading-[44px] font-[Geologica]">Insights That Inspire Vision Forward</h2>
                         </div>
                         <div>
-                            <Link to="/insights" className="h-[48px] flex items-center justify-between p-5 rounded-full bg-white text-black text-base font-semibold leading-[24px] font-[Inter]" >
+                            <Link to="/insights" className="h-[48px] flex items-center justify-between p-5 rounded-full bg-white text-black text-base font-semibold leading-[24px] font-[Inter]" aria-label="insight link" >
                                 Explore More
                                 <ArrowIcon />
                             </Link>
@@ -50,9 +50,9 @@ export default function InsightsSection() {
                     </div>
                     <div className="pt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 items-start">
                         {InsightCards.map(item => (
-                            <Link to={item.path} key={item.id} className=" bg-[#121212] border border-[#2D2D2D] rounded-[12px] overflow-hidden flex flex-col items-center justify-center" >
+                            <Link to={item.path} key={item.id} className=" bg-[#121212] border border-[#2D2D2D] rounded-[12px] overflow-hidden flex flex-col items-center justify-center" aria-label="insight link" >
                                 <div className="h-[227px] overflow-hidden">
-                                    <img className="h-full w-full object-cover" src={item.img} alt={item.title} width={392} height={227} />
+                                    <img className="h-full w-full object-cover" src={item.img} alt={item.title} width={392} height={227} loading="lazy" />
                                 </div>
 
                                 <div className="h-full p-6 flex flex-col items-start">

@@ -82,10 +82,11 @@ export default function Services() {
                                 key={item.id}
                                 onClick={() => setActiveTab(item.id)}
                                 className={`w-full p-4 rounded-[8px] flex items-center gap-3 transition-all
-                  ${activeTab === item.id
-                                        ? "bg-[#F3FE0014] text-white"
-                                        : "text-white hover:bg-[#F3FE0014]"
-                                    }`}
+                                             ${activeTab === item.id
+                                             ? "bg-[#F3FE0014] text-white"
+                                             : "text-white hover:bg-[#F3FE0014]"
+                                          }`}
+                                        aria-label="service tab"
                             >
                                 <span>{item.icon}</span>
                                 <p className="text-base leading-[24px] font-semibold font-[Inter]">
