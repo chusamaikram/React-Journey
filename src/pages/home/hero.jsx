@@ -1,13 +1,11 @@
 import bg1 from "../../assets/images/bg1.png"
 import bg2 from "../../assets/images/bg2.png"
 import bg3 from "../../assets/images/bg3.png"
-import industrylogo from "../../assets/images/industry-logo.png"
+import TrustedLogo from "../../assets/svg/trusted-logo.svg"
 import { adiqat, cisco, nissan, repurpose, trafilea, walmart, yallamotor } from "../../assets/images";
 import Button from "../../components/common/button";
-import HeroStar from "../../assets/svg/hero-star.svg"
 
 import { Bdot, Diamond, FigmaIcon, StarIcon1, StarIcon2, Wicon, XD } from "../../assets/svg";
-import Mainheading from "../../components/common/mainheading";
 
 export default function HeroSection() {
     const Startups = [
@@ -66,7 +64,7 @@ export default function HeroSection() {
             name: 'adiqat',
             image: adiqat,
             width: "56",
-            height: "33"
+            height: "40"
         },
         {
             name: 'yallamotor',
@@ -139,12 +137,11 @@ export default function HeroSection() {
                         <img className="absolute z-0 -top-[15px] -right-[60px] blur-[30px] hidden sm:block opacity-[0.8]" src={bg3} alt="glow" />
                         <StarIcon1 />
                         <StarIcon2 />
-                        {/* <img className="w-[47px] sm:w-full absolute z-1 top-[330px] sm:top-[380px] left-0 sm:left-[65px]" src={HeroStar} alt="star icon" width={73} height={80} /> */}
-
+    
                         <div className="absolute z-10 top-0 left-0">
                             <div className="above-glow mx-auto w-fit sm:w-[600px] mt-8 sm:mt-12 mx-auto bg-[#0B0B0B] rounded-[8px] border border-[rgba(60,60,60,0.4)] flex flex-col sm:flex-row items-start sm:items-center justify-center gap-5 p-2">
                                 <div className="flex items-center gap-3">
-                                    <img src={industrylogo} alt="" />
+                                    <img src={TrustedLogo} alt="thumbnail" width={28} height={28} />
                                     <p className="leading-[normal]">Trusted by startups to craft $100M+ designs with</p>
                                 </div>
 
