@@ -175,12 +175,12 @@ export default function HeroSection() {
                             <div className=" above-glow flex items-center justify-center gap-[20px]">
                                 <Button
                                     path="/contact" hovertext={" Let's talk 🤙"} defaulttext={"Schedule Call"}
-                                    className="w-[170px] h-[48px] bg-white border border-white text-[#0B0B0B]  font-[Plus Jakarta Sans] leading-none "
+                                    className=" h-[48px] bg-white border border-white text-[#0B0B0B]  font-[Plus Jakarta Sans] leading-none "
                                     showicon={false}
                                 />
                                 <Button
                                     path="/work" target="_blank" hovertext={" Open "} defaulttext={"©2025 Work"}
-                                    className="w-[149px] h-[48px] bg-black border border-white font-[Inter] hover:border-[#F3FE00] "
+                                    className=" h-[48px] bg-black border border-white font-[Inter] hover:border-[#F3FE00] "
                                     showicon={false}
                                 />
                             </div>

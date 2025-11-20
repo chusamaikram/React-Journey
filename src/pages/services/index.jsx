@@ -71,12 +71,12 @@ export default function Services() {
     }, [currentPath]);
 
     return (
-        <section className="pt-10 pb-25 bg-[#090909]">
+        <section className="pt-10 pb-25 bg-transparent md:bg-[#090909]">
             <div className="container">
                 <div className=" grid grid-cols-1 sm:grid-cols-[280px_1fr] gap-6 items-start">
 
 
-                    <aside className="w-full sm:w-[279px] sticky top-[40px] flex flex-col items-start bg-[#090909]">
+                    <aside className="w-full sm:w-[279px] sm:sticky top-[40px] flex flex-col items-start bg-transparent md:bg-[#090909]">
                         {Sidebar.map((item) => (
                             <button
                                 key={item.id}

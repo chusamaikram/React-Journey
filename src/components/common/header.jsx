@@ -6,8 +6,25 @@ import logo from "../../assets/images/logo.svg";
 import { useState, useEffect } from "react";
 import dropdown from "../../assets/svg/dropdown.svg";
 import Services from "../../pages/services";
+import { Humbergur, ThemeIcon } from "../../assets/svg";
 
 export default function Header() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const [mobileView, setMobileview] = useState(false);
+  const toggleMobileView = () => {
+    setMobileview((prev) => !prev);
+  };
+
+
+
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showServicesPanel, setShowServicesPanel] = useState(false);
@@ -37,7 +54,7 @@ export default function Header() {
             </Link>
 
             <ul
-              className={`py-12 lg:py-0 px-6 lg:px-0 flex flex-col gap-2 lg:gap-none lg:flex-row items-center absolute lg:static left-0 top-[80px] w-full lg:w-auto h-screen lg:h-auto bg-black lg:bg-transparent ${isMenuOpen
+              className={`py-12 lg:py-0 px-6 lg:px-0 flex flex-col gap-4 lg:gap-none lg:flex-row items-center absolute lg:static left-0 top-[80px] w-full lg:w-auto min-h-screen md:min-h-auto bg-black lg:bg-transparent ${isMenuOpen
                 ? "opacity-100 visible"
                 : "opacity-0 invisible lg:visible lg:opacity-100"
                 }`}
@@ -47,21 +64,28 @@ export default function Header() {
                   {link.name === "Services" ? (
                     <div
                       className="service-link relative"
-                      onMouseEnter={() => setShowServicesPanel(true)}
+                      onMouseEnter={() => !isMobile && setShowServicesPanel(true)}
                       onMouseLeave={() => setShowServicesPanel(false)}
                     >
                       <Link
+                        onClick={toggleMobileView}
                         to={link.path}
-                        className={`relative text-lg font-normal flex items-center gap-2 px-2 py-2 font-[Poppins] text-[18px] leading-[27px] ${isServicesActive ? "text-[#F3FE00]" : "text-white"}`}
+                        className={`relative text-lg font-normal flex items-center justify-center gap-2 px-2 py-2 font-[Poppins] text-[18px] leading-[27px] ${isServicesActive ? "text-[#F3FE00]" : "text-white"}`}
                       >
                         Services
                         <img src={dropdown} alt="dropdownicon" width={14} height={14} />
 
                         <span
                           className={`absolute left-1/2 bottom-0 h-[1px] transform -translate-x-1/2 bg-[#F3FE00] transition-all duration-500 ease-in-out
-                                     ${isServicesActive ? "w-6 opacity-100" : "w-0 opacity-0"}`}
-                        ></span>
+                                     ${isServicesActive ? "w-6 opacity-100" : "w-0 opacity-0"}`}></span>
+
                       </Link>
+                      {mobileView && (
+                        <div className="w-full max-h-[70vh] overflow-y-auto mt-2 pb-4 scrollbar-width-[none] [&::-webkit-scrollbar]:hidden ">
+                          <Services />
+
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <Link
@@ -84,28 +108,22 @@ export default function Header() {
                 path="contact"
                 hovertext={" Let's talk"}
                 defaulttext={"Work with us"}
-                className="flex sm:hidden max-w-[190px] w-full text-black border border-[#f3fe00] bg-[#f3fe00] hover:bg-black  hover:text-[#f3fe00]"
+                className="flex sm:hidden w-[190px]  text-black border border-[#f3fe00] bg-[#f3fe00] hover:bg-black  hover:text-[#f3fe00]"
               />
             </ul>
 
             <div className="flex items-center gap-3">
               <button className="p-1 bg-white rounded-[12px] sm:rounded-[16px] w-[38px] sm:w-[52px] h-[24px] sm:h-[32px] cursor-pointer relative" aria-label="theme toggler">
                 <div className="w-[20px] sm:w-[26px] h-[20px] sm:h-[26px] bg-black rounded-full absolute left-[3px] top-[3px] flex items-center justify-center">
-                  <svg className="w-[12px] sm:w-[16px]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M10.0192 1.65965C9.43727 1.47632 8.93987 2.11231 9.24834 2.63898C9.73567 3.46964 9.99834 4.40698 9.99834 5.34698C9.99834 8.29231 7.61054 10.6803 4.665 10.6803C4.1104 10.6803 3.54947 10.5903 3.04 10.4303C2.45807 10.247 1.9398 10.883 2.24834 11.4096C3.43334 13.431 5.59914 14.6803 7.99834 14.6803C11.6802 14.6803 14.665 11.6956 14.665 8.01364C14.665 5.07965 12.7713 2.52498 10.0192 1.65965ZM11.0817 3.65965C12.4577 4.63231 13.3317 6.23565 13.3317 8.01364C13.3317 10.959 10.9439 13.347 7.99834 13.347C6.64627 13.347 5.4104 12.827 4.45667 11.9723C4.5278 11.9743 4.59414 12.0136 4.665 12.0136C8.34694 12.0136 11.3317 9.02897 11.3317 5.34698C11.3317 4.77565 11.2303 4.21031 11.0817 3.65965Z" fill="white"></path>
-                  </svg>
+                  <ThemeIcon />
                 </div>
               </button>
               <Button
                 path="/contact" hovertext={" Let's talk"} defaulttext={"Work with us"}
-                className="header-btn  max-w-[190px] w-full border border-[#f3fe00] bg-[#f3fe00] transition-[background-color,border-color] duration-500 ease-in-out hover:bg-black text-black hover:text-[#f3fe00] "
+                className="header-btn  w-[190px] border border-[#f3fe00] bg-[#f3fe00] transition-[background-color,border-color] duration-500 ease-in-out hover:bg-black text-black hover:text-[#f3fe00] "
               />
               <button className="block lg:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="humbergur " >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M10 5H20" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M4 12H20" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M4 19H14" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                <Humbergur />
               </button>
 
             </div>
@@ -114,13 +132,15 @@ export default function Header() {
 
         {showServicesPanel && (
           <div
-            className="  fixed left-0 top-[80px] overflow-y-auto  scrollbar-width-[none] [&::-webkit-scrollbar]:hidden  h-[calc(100vh-80px)] transition-all duration-300 ease w-full bg-[#0D0D0D] "
-            onMouseEnter={() => setShowServicesPanel(true)}
+            className=" fixed left-0 top-[80px] overflow-y-auto  scrollbar-width-[none] [&::-webkit-scrollbar]:hidden  h-[calc(100vh-80px)] transition-all duration-300 ease w-full bg-[#0D0D0D] "
+            onMouseEnter={() => !isMobile && setShowServicesPanel(true)}
             onMouseLeave={() => setShowServicesPanel(false)}
           >
             <Services />
           </div>
         )}
+
+
       </header>
     </>
   );
