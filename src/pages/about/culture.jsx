@@ -105,30 +105,30 @@ export default function CultureSection() {
                 </div>
             </section>
 
-            <section className=" bg-[#0D0D0D] py-8 sm:py-[80px]">
+            <section className=" our-values bg-[#0D0D0D] py-8 sm:py-[80px]">
                 <div className="container">
                     <div className="flex flex-col items-start gap-8 sm:gap-20 justify-between">
                         <div>
                             <span className="text-sm text-[#F3FE00] font-[Geologica] uppercase">our value</span>
                             <p className="mt-6 text-start text-[28px] sm:text-[32px] font-[300] leading-[42px] sm:leading-[46px] font-[Geologica]" >Together, we make perfect partners. We offer worry-free partnerships and deliver your vis<span className="text-[#A3A3A3]">ion into reality with our top-tier creativity. No fluff, just the good stuff. </span></p>
                         </div>
-                        <div className="flex flex-col items-start justify-between">
+                        <ul className="w-full flex flex-col items-start justify-between gap-4">
                             {ValueCards.map((item) => (
-                                <div key={item.id} className="mt-6 sm:mt-0  h-[120px] w-[1180px] py-8 px-4 sm:px-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-20 justify-between ">
-                                    <div className="flex items-center gap-3 sm:gap-20 font-[Inter] ">
+                                <li key={item.id} className="mt-6 sm:mt-0 py-7 px-6 w-full py-8 flex flex-col md:flex-row items-start md:items-center gap-y-4 gap-x-20 justify-between bg-[#0D0D0D] rounded-[8px] ">
+                                    <div className="flex items-center gap-3 md:gap-20 font-[Inter] ">
                                         <span className="w-[24px] text-lg ">{item.id}</span>
                                         <h2 className="text-[28px] sm:text-[32px] font-[200] font-[Geologica] leading-normal" >{item.title}</h2>
                                     </div>
-                                    <div>
-                                        <p className=" w-[295px] sm:w-[424px] text-sm leading-[21px]"> {item.desc}</p>
+                                    <div className="md:w-[424px]">
+                                        <p className=" text-sm leading-[21px]"> {item.desc}</p>
                                     </div>
 
-                                </div>
+                                </li>
 
                             ))}
 
 
-                        </div>
+                        </ul>
 
                     </div>
                 </div>

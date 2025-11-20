@@ -97,15 +97,14 @@ export default function Header() {
                 </div>
               </button>
               <Button
-
                 path="/contact" hovertext={" Let's talk"} defaulttext={"Work with us"}
                 className="header-btn  max-w-[190px] w-full border border-[#f3fe00] bg-[#f3fe00] transition-[background-color,border-color] duration-500 ease-in-out hover:bg-black text-black hover:text-[#f3fe00] "
               />
               <button className="block lg:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="humbergur " >
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M10 5H20" stroke="white" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
-                  <path d="M4 12H20" stroke="white" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
-                  <path d="M4 19H14" stroke="white" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
+                  <path d="M10 5H20" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M4 12H20" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M4 19H14" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </button>
 
@@ -126,3 +125,4 @@ export default function Header() {
     </>
   );
 }
+

@@ -1,6 +1,6 @@
-import bg1 from "../../assets/images/bg1.png"
-import bg2 from "../../assets/images/bg2.png"
-import bg3 from "../../assets/images/bg3.png"
+import bg1 from "../../assets/images/bg1.webp"
+import bg2 from "../../assets/images/bg2.webp"
+import bg3 from "../../assets/images/bg3.webp"
 import TrustedLogo from "../../assets/svg/trusted-logo.svg"
 import { adiqat, cisco, nissan, repurpose, trafilea, walmart, yallamotor } from "../../assets/images";
 import Button from "../../components/common/button";
@@ -132,9 +132,9 @@ export default function HeroSection() {
                 <div className="container">
                     <div className="relative ">
 
-                        <img className="absolute z-0 top-0 -left-[65px] hidden sm:block blur-[30px]" src={bg1} alt="glow " />
-                        <img className="hidden sm:block  absolute z-0 top-[150px] sm:top-0 -left-[20px] sm:left-[65px] " src={bg2} alt="glow" />
-                        <img className="absolute z-0 -top-[15px] -right-[60px] blur-[30px] hidden sm:block opacity-[0.8]" src={bg3} alt="glow" />
+                        <img className="absolute z-0 top-0 -left-[65px] hidden sm:block blur-[30px]" src={bg1} width={649} height={789}  aria-hidden="true" />
+                        <img className="hidden sm:block  absolute z-0 top-[150px] sm:top-0 -left-[20px] sm:left-[65px] " src={bg2} width={435} height={429} aria-hidden="true" />
+                        <img className="absolute z-0 -top-[15px] -right-[60px] blur-[30px] hidden sm:block opacity-[0.8]" src={bg3} width={673} height={606} aria-hidden="true" />
                         <StarIcon1 />
                         <StarIcon2 />
     

@@ -1,4 +1,4 @@
-import gradientbg from "../../assets/images/gradient-bg.png"
+import gradientbg from "../../assets/images/gradient-bg.webp"
 import SpinningStar from "../../assets/images/spining-star.gif"
 import CursorGlow from "../../components/common/blowanimation";
 import Button from "../../components/common/button";

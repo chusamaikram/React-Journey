@@ -113,12 +113,12 @@ export default function Footer() {
                             <p className="text-lg leading-[27px] text-left text-[#BDBDBD] font-[Inter]">We transform ideas into user-centered digital experiences for businesses worldwide, from Fortune 500s to startups, using Figma, Webflow, and no-code solutions.</p>
                         </div>
                         {FooterLinks.map(item => (
-                            <div id={item.id}
+                            <div key={item.id}
                                 className=" flex flex-col items-start gap-5 font-['Inter_Tight']">
                                 <h2 className="text-base font-semibold leading-[20px] text-[#FFFFFF]">{item.title}</h2>
                                 <ul className="flex flex-col items-start gap-3.5">
                                     {item.links.map((link, i) => (
-                                        <li id={i} className="" >
+                                        <li key={i} className="" >
                                             <Link
                                                 className="text-[15px] leading-[20px] text-[#8F8F8F] hover:text-[#FFFFFF] font-[Inter Tight]"
                                                 to={link.path}>
@@ -133,7 +133,7 @@ export default function Footer() {
                     </div>
                     <div className="grid sm:grid-cols-4 items-start gap-4 p-6 bg-[#1A1A1A]">
                         {Address.map(item => (
-                            <div id={item.id}
+                            <div key={item.id}
                                 className="flex flex-col items-start gap-[6px] p-5 font-['Inter_Tight'] " >
                                 <img src={item.img} alt={item.title}
                                     width={32}
