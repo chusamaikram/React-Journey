@@ -50,11 +50,11 @@ export default function Header() {
         <div className="container">
           <nav className="flex items-center justify-between">
             <Link to="/" aria-label="zeeframes logo">
-              <img src={logo} alt="logo" width={179} height={36} />
+              <img src={logo} alt="logo" width={179} height={36} loading="eager" />
             </Link>
 
             <ul
-              className={`py-12 lg:py-0 px-6 lg:px-0 flex flex-col gap-4 lg:gap-none lg:flex-row items-center absolute lg:static left-0 top-[80px] w-full lg:w-auto min-h-screen md:min-h-auto bg-black lg:bg-transparent ${isMenuOpen
+              className={`py-12 lg:py-0 px-6 lg:px-0 flex flex-col gap-8 lg:gap-none lg:flex-row items-center absolute lg:static left-0 top-[80px] w-full lg:w-auto min-h-screen md:min-h-auto bg-black lg:bg-transparent ${isMenuOpen
                 ? "opacity-100 visible"
                 : "opacity-0 invisible lg:visible lg:opacity-100"
                 }`}
@@ -104,12 +104,12 @@ export default function Header() {
                 </li>
               ))}
 
-              <Button
+              {/* <Button
                 path="contact"
                 hovertext={" Let's talk"}
                 defaulttext={"Work with us"}
                 className="flex sm:hidden w-[190px]  text-black border border-[#f3fe00] bg-[#f3fe00] hover:bg-black  hover:text-[#f3fe00]"
-              />
+              /> */}
             </ul>
 
             <div className="flex items-center gap-3">
