@@ -54,7 +54,7 @@ export default function Header() {
             </Link>
 
             <ul
-              className={`py-12 lg:py-0 px-6 lg:px-0 flex flex-col gap-8 lg:gap-none lg:flex-row items-center absolute lg:static left-0 top-[80px] w-full lg:w-auto min-h-screen md:min-h-auto bg-black lg:bg-transparent ${isMenuOpen
+              className={`py-12 lg:py-0 px-6 lg:px-0 flex flex-col gap-8 lg:gap-0 lg:flex-row items-center absolute lg:static left-0 top-[80px] w-full lg:w-auto min-h-screen md:min-h-auto bg-black lg:bg-transparent ${isMenuOpen
                 ? "opacity-100 visible"
                 : "opacity-0 invisible lg:visible lg:opacity-100"
                 }`}
@@ -70,7 +70,7 @@ export default function Header() {
                       <Link
                         onClick={toggleMobileView}
                         to={link.path}
-                        className={`relative text-lg font-normal flex items-center justify-center gap-2 px-2 py-2 font-[Poppins] text-[18px] leading-[27px] ${isServicesActive ? "text-[#F3FE00]" : "text-white"}`}
+                        className={`relative text-lg font-normal flex items-center justify-center gap-2 px-4 py-2 font-[Poppins] text-[18px] leading-[27px] ${isServicesActive ? "text-[#F3FE00]" : "text-white"}`}
                       >
                         Services
                         <img src={dropdown} alt="dropdownicon" width={14} height={14} />
@@ -90,7 +90,7 @@ export default function Header() {
                   ) : (
                     <Link
                       to={link.path}
-                      className={`relative px-3 py-2 font-[Poppins] text-[18px] leading-[27px] ${pathname === link.path ||
+                      className={`relative px-4 py-2 font-[Poppins] text-[18px] leading-[27px] ${pathname === link.path ||
                         (pathname.includes(link.path) && link.path !== "/")
                         ? "text-[#F3FE00]"
                         : "text-[#FFFFFF]"
@@ -104,12 +104,12 @@ export default function Header() {
                 </li>
               ))}
 
-              {/* <Button
+              <Button
                 path="contact"
                 hovertext={" Let's talk"}
                 defaulttext={"Work with us"}
                 className="flex sm:hidden w-[190px]  text-black border border-[#f3fe00] bg-[#f3fe00] hover:bg-black  hover:text-[#f3fe00]"
-              /> */}
+              />
             </ul>
 
             <div className="flex items-center gap-3">
@@ -120,7 +120,7 @@ export default function Header() {
               </button>
               <Button
                 path="/contact" hovertext={" Let's talk"} defaulttext={"Work with us"}
-                className="header-btn  w-[190px] border border-[#f3fe00] bg-[#f3fe00] transition-[background-color,border-color] duration-500 ease-in-out hover:bg-black text-black hover:text-[#f3fe00] "
+                className="header-btn  max-w-[190px] border border-[#f3fe00] bg-[#f3fe00] transition-[background-color,border-color] duration-500 ease-in-out hover:bg-black text-black hover:text-[#f3fe00] "
               />
               <button className="block lg:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="humbergur " >
                 <Humbergur />

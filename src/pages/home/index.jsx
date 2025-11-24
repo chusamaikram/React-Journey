@@ -1,5 +1,6 @@
 import gradientbg from "../../assets/images/gradient-bg.webp"
 import SpinningStar from "../../assets/images/spining-star.gif"
+import WtspBtn from "../../components/WtspBtn";
 import CursorGlow from "../../components/common/blowanimation";
 import Button from "../../components/common/button";
 import ContactUs from "./contact-us";
@@ -50,15 +51,17 @@ export default function Home() {
             <InsightsSection />
             <ContactUs />
 
+            <WtspBtn />
 
-            <div className="floating_btn">
+
+            {/* <div className="floating_btn">
                 <a target="_blank" href="https://wa.me/" aria-label="whatsapp link">
                     <div className="contact_icon">
                         <i className="fa fa-whatsapp my-float"></i>
                     </div>
                 </a>
             </div>
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" aria-label=" whatsapp btn style"></link>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" aria-label=" whatsapp btn style"></link> */}
 
 
         </>
