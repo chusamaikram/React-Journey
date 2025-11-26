@@ -138,7 +138,7 @@ develop excellently. And we care deeply about what we do."
                             </ul>
                         </div>
                         <div className="hidden md:block  sticky top-[20vh] h-['fit-content'] ">
-                            <img className="object-cover w-full rounded-4" src={activeImage} alt="process visuals" width={527} height={506} loading="lazy" />
+                            <img className="object-contain w-full rounded-4" src={activeImage} alt="process visuals" width={527} height={506} loading="lazy" />
 
                         </div>
 
