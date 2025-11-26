@@ -32,20 +32,17 @@ export default function WtspBtn() {
                     onChange={(e) => setMessage(e.target.value)}
                 />
 
-                <button onClick={sendMessage} className="p-2 cursor-pointer">
+                <button onClick={sendMessage} className="p-2 cursor-pointer " aria-label="social button">
                     <IoSend size={20} className="text-white" />
                 </button>
             </div>
-
-            {/* YELLOW WAVING GLOW */}
             {!open && <span className="whatsapp-glow"></span>}
-
-            {/* MAIN BUTTON */}
             <button
                 onClick={() => setOpen(!open)}
                 className={`relative w-[60px] cursor-pointer h-[60px] rounded-full shadow-xl flex items-center justify-center 
                    text-white transition-all duration-300
                    ${open ? "bg-gray-700" : "bg-[#2e3000]"}`}
+                   aria-label="social btn"
             >
                 {open ? (
                     <IoClose size={32} className="text-white" />

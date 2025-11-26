@@ -9,7 +9,15 @@ import process6 from "../../assets/images/process-6.webp"
 
 import { useEffect, useRef, useState } from "react";
 
+import { motion, useScroll } from "framer-motion"
+
 export default function ProcessSection() {
+    const containerRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start start", "end end"]
+    });
+
     const [activeImage, setActiveImage] = useState(process1);
 
     const cardRefs = useRef([]);
@@ -95,7 +103,15 @@ export default function ProcessSection() {
 develop excellently. And we care deeply about what we do."
                         />
                     </div>
-                    <div className="flex items-start gap-20 relative">
+                    <div ref={containerRef} className="flex items-start gap-20 relative">
+                        <motion.div
+                            style={{
+                                scaleY: scrollYProgress,
+                                transformOrigin: 'top',
+                            }}
+                            initial={{ scaleY: 0 }}
+                            className=" hidden md:block absolute left-[29px] top-0 h-full w-[3px] bg-[#F3FE00]"
+                        />
                         <div className="process-cards pl-none sm:pl-12 w-full max-w-[609px] relative">
                             <ul className="  flex flex-col items-start gap-8 md:gap-25">
                                 {Cards.map((items, index) => (
@@ -105,15 +121,15 @@ develop excellently. And we care deeply about what we do."
                                     >
                                         <div className="flex flex-col items-start gap-10">
 
-                                        <ProcessCard
-                                            id={items.id}
-                                            heading={items.heading}
-                                            category={items.category}
-                                            desc={items.desc}
-                                        />
-                                        <div className="overflow-hidden block md:hidden">
-                                            <img className="object-cover w-full h-full rounded-4" src={items.img} alt="thumbnail" width={527} height={506} loading="lazy"/>
-                                        </div>
+                                            <ProcessCard
+                                                id={items.id}
+                                                heading={items.heading}
+                                                category={items.category}
+                                                desc={items.desc}
+                                            />
+                                            <div className="overflow-hidden block md:hidden">
+                                                <img className="object-cover w-full h-full rounded-4" src={items.img} alt="thumbnail" width={527} height={506} loading="lazy" />
+                                            </div>
                                         </div>
 
                                     </li>
