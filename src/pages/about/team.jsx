@@ -1,4 +1,4 @@
-import Heading from "../../components/common/headings";
+import Heading from "../../components/common/Sec-headings";
 import team1 from "../../assets/images/team1.png"
 
 export default function TeamSection() {

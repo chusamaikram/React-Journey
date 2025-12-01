@@ -184,9 +184,9 @@ export default function HeroSection() {
                                     showicon={false}
                                 />
                             </div>
-                            <p className="mt-8 sm:mt-[88px] text-center text-[14px] font-[500] uppercase font-[Plus Jakarta Sans] text-[#E7E7E7]">Trusted by Industry Leaders & Fast-Growing Startups</p>
+                            <p className="mt-8 sm:mt-[88px] text-center text-[14px] font-medium uppercase text-[#E7E7E7]">Trusted by Industry Leaders & Fast-Growing Startups</p>
                             <div className="py-5 mt-6 hidden sm:flex  overflow-hidden">
-                                <div className=" slide-track relative py-1 flex flex-shrink-0  items-center justify-between gap-[48px]">
+                                <div className=" slide-track relative py-1 flex shrink-0  items-center justify-between gap-[48px]">
                                     {companies.map(item => (
                                         <div key={item.name} className=" ">
                                             <img className="w-full h-full"

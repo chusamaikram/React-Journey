@@ -56,35 +56,35 @@ export default function ContactUs({border_color="border-[#F3FE00]" , radius="rou
                 <div className="container">
                     <div className="flex flex-col lg:flex-row items-start justify-center gap-8 sm:gap-16">
                         <div className="max-w-[636px] w-full flex flex-col items-start justify-center gap-8">
-                            <span className="text-sm text-[#F3FE00] uppercase font-[Geologica]">Contact us</span>
+                            <span className="text-sm text-[#F3FE00] uppercase font-[Inter]">Contact us</span>
                             <div className="max-w-[534px] flex flex-col items-start gap-4">
                                 <h2 className="text-[28px] sm:text-[40px] font-bold leading-[40px] font-[Geologica]">Lets work on what you care about!</h2>
-                                <p className="text-[#BDBDBD] text-sm leading-[21px] font-['Inter_Tight']">Got a project in mind? From a full UI/UX refresh to a brand-new digital experience, we're ready to help. Let's turn your vision into reality</p>
+                                <p className="text-[#BDBDBD] text-sm leading-[21px] font-[Inter]">Got a project in mind? From a full UI/UX refresh to a brand-new digital experience, we're ready to help. Let's turn your vision into reality</p>
                             </div>
                             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-center gap-6">
 
                                 <div className="flex items-center gap-4">
                                     <img src={ali} className=" rounded-full border border-[#454545]" width={48} height={48} loading="lazy" alt="founder" />
                                     <div className="flex flex-col items-start gap-1.5 ">
-                                        <h3 className="flex items-center gap-2 text-base font-medium leading-[21px] font-['Inter_Tight']">
+                                        <h3 className="flex items-center gap-2 text-base font-medium leading-[21px] font-[Inter]">
                                             Mohammad Ali
                                             <a href="https://www.linkedin.com/in/mohammad-ali-ui-ux-consultant/" target="blank" aria-label="social link"> <LinkdelnMini /></a>
                                         </h3>
-                                        <span className="text-[#BDBDBD] text-sm leading-[21px] font-['Plus_Jakarta_Sans']">Director & Co-Founder</span>
+                                        <span className="text-[#BDBDBD] text-sm leading-[21px] font-[Inter]">Director & Co-Founder</span>
 
                                     </div>
 
                                 </div>
-                                <span className="hidden sm:block  h-[15px] w-[1px] bg-[#454545]"></span>
+                                <span className="hidden sm:block  h-[15px] w-1px bg-[#454545]"></span>
                                 <div className="flex items-center gap-4" >
                                     <img src={babar} className=" rounded-full border border-[#454545]" width={48} height={48} loading="lazy" alt="founder thumbnail" />
                                     <div className="flex flex-col items-start gap-1.5 ">
                                         <div className="flex items-center gap-2">
-                                            <h3 className=" text-base font-medium leading-[21px] font-['Inter_Tight']"> Muhammad Babar</h3>
+                                            <h3 className=" text-base font-medium leading-[21px] font-[Inter]"> Muhammad Babar</h3>
                                             <a href="https://www.linkedin.com/in/muhammadbabar-uxui/" target="blank" aria-label="social link"> <LinkdelnMini /> </a>
                                         </div>
 
-                                        <span className="text-[#BDBDBD] text-sm leading-[21px] font-['Plus_Jakarta_Sans']">Director & Co-Founder</span>
+                                        <span className="text-[#BDBDBD] text-sm leading-[21px] font-[Inter]">Director & Co-Founder</span>
 
                                     </div>
 
@@ -95,7 +95,7 @@ export default function ContactUs({border_color="border-[#F3FE00]" , radius="rou
                                 {Checks.map((items, index) => (
                                     <li key={index} className="flex items-center gap-2">
                                         <CheckIcon />
-                                        <p className="text-sm leading-[21px] text-[#BDBDBD] font-['Inter_Tight']">{items}</p>
+                                        <p className="text-sm leading-[21px] text-[#BDBDBD] font-[Inter]">{items}</p>
 
                                     </li>
                                 ))}
@@ -158,7 +158,7 @@ export default function ContactUs({border_color="border-[#F3FE00]" , radius="rou
                                             />
 
                                             {touched.name && errors.name && (
-                                                <p className="text-red-500 text-xs mt-1 font-medium font-['Inter_Tight'] leading-[normal]">
+                                                <p className="text-red-500 text-xs mt-1 font-medium font-[Inter] leading-[normal]">
                                                     {errors.name}
                                                 </p>
                                             )}
@@ -174,7 +174,7 @@ export default function ContactUs({border_color="border-[#F3FE00]" , radius="rou
                                                 touched={touched.email}
                                             />
                                             {touched.email && errors.email && (
-                                                <p className="text-red-500 text-xs mt-1 font-medium font-['Inter_Tight'] leading-[normal]">
+                                                <p className="text-red-500 text-xs mt-1 font-medium font-[Inter] leading-[normal]">
                                                     {errors.email}
                                                 </p>
                                             )}
@@ -204,22 +204,22 @@ export default function ContactUs({border_color="border-[#F3FE00]" , radius="rou
                                                 onBlur={handleBlur}
                                                 error={errors.message}
                                                 touched={touched.message}
-                                                className={`w-full p-4 bg-[#171717] border rounded-[8px] outline-none h-[117px] resize-none text-[#B9B9B9] text-sm font-medium font-['Inter_Tight']
+                                                className={`w-full p-4 bg-[#171717] border rounded-[8px] outline-none h-[117px] resize-none text-[#B9B9B9] text-sm font-medium font-[Inter]
                                                    ${errors.message && touched.message
                                                         ? "border-red-500"
                                                         : "border-[#373737] focus:border-[#F3FE00]"
                                                     } `}
                                                 placeholder="Tell us about your project*" />
                                             {touched.message && errors.message && (
-                                                <p className="text-red-500 text-xs mt-1 font-medium font-['Inter_Tight'] leading-[normal]">
+                                                <p className="text-red-500 text-xs mt-1 font-medium font-[Inter] leading-[normal]">
                                                     {errors.message}
                                                 </p>
                                             )}
                                         </div>
 
                                         <button type="submit" disabled={isSubmitting}
-                                            className={`cursor-pointer px-5.5 py-3.5 my-1 bg-[#242323] border ${border_color} ${radius}  w-full flex items-center justify-center text-base font-semibold leading-[21px] text-white font-['Inter_Tight'] ${isSubmitting ? "opacity-70 cursor-not-allowed" : ""}`}>  {isSubmitting ? "Submitting..." : "Submit Inquiry"}</button>
-                                        <div className="font-['Inter_Tight'] flex flex-col items-start gap-2">
+                                            className={`cursor-pointer px-5.5 py-3.5 my-1 bg-[#242323] border ${border_color} ${radius}  w-full flex items-center justify-center text-base font-semibold leading-[21px] text-white font-[Inter] ${isSubmitting ? "opacity-70 cursor-not-allowed" : ""}`}>  {isSubmitting ? "Submitting..." : "Submit Inquiry"}</button>
+                                        <div className="font-[Inter] flex flex-col items-start gap-2">
                                             <p className="text-sm text-[#F2F2F2]">Hate contact forms? Direct Contact.</p>
                                             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                                                 <a className="flex items-center gap-1.5" href="https://wa.me/+14232493851" target="blank" aria-label="contact link">

@@ -1,7 +1,6 @@
 import Button from "../../components/common/button";
 import { PlusIcon, MinusIcon } from "../../assets/svg"
 import ClutchRatings from "../../assets/svg/clutch-ratings.svg"
-import { Link } from "react-router-dom";
 import { useState } from "react";
 
 
@@ -48,11 +47,11 @@ export default function FaqSection() {
             <section className="above-glow  hidden sm:block py-[80px]">
                 <div className="container ">
                     <div className="flex flex-col lg:flex-row items-start justify-between gap-12 ">
-                        <div className="max-w-[414px] w-full flex flex-col items-start gap-8 font-[Geologica] ">
-                            <span className="text-[#F3FE00] text-sm uppercase">FAQs</span>
+                        <div className="max-w-[414px] w-full flex flex-col items-start gap-8  ">
+                            <span className="text-[#F3FE00] text-sm uppercase font-[Inter]">FAQs</span>
                             <div className="flex flex-col items-start gap-3">
-                                <h2 className="text-[40px] leading-[40px] font-bold uppercase ">Got Question?</h2>
-                                <p className="max-w-[408px] text-[#BDBDBD] text-sm leading-[21px] font-['Inter_Tight'] ">We begin with meaningful conversations that drive design decisions.</p>
+                                <h2 className="text-[40px] leading-[40px] font-bold uppercase font-[Geologica] ">Got Question?</h2>
+                                <p className="max-w-[408px] text-[#BDBDBD] text-sm leading-[21px] font-[Inter] ">We begin with meaningful conversations that drive design decisions.</p>
                             </div>
 
                             <div className="flex items-start justify-between gap-8">
@@ -72,7 +71,7 @@ export default function FaqSection() {
                                 </a>
                             </div>
                         </div>
-                        <div className=" w-full flex-grow flex flex-col items-start justify-center gap-4 font-['Inter_Tight']">
+                        <div className=" w-full flex-grow flex flex-col items-start justify-center gap-4 font-[Inter]">
                             {FaqCards.map((item, index) => (
                                 <div key={index} className={` w-full p-5  bg-[rgba(255, 255, 255, 0.04)] border  transition-all duration-500 ${activeIndex === index ? "border-[#F3FE00]" : "border-[#3C3C3C]"}  rounded-[12px]`}>
                                     <button className=" w-full bg-transparent border-none cursor-pointer flex items-center justify-between" onClick={() => handletogle(index)} aria-label="accordian btn">

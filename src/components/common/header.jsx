@@ -70,13 +70,13 @@ export default function Header() {
                       <Link
                         onClick={toggleMobileView}
                         to={link.path}
-                        className={`relative text-lg font-normal flex items-center justify-center gap-2 px-4 py-2 font-[Poppins] text-[18px] leading-[27px] ${isServicesActive ? "text-[#F3FE00]" : "text-white"}`}
+                        className={`relative text-lg font-normal flex items-center justify-center gap-2 px-4 py-2 font-[Inter] text-[18px] leading-[27px] ${isServicesActive ? "text-[#F3FE00]" : "text-white"}`}
                       >
                         Services
                         <img src={dropdown} alt="dropdownicon" width={14} height={14} />
 
                         <span
-                          className={`absolute left-1/2 bottom-0 h-[1px] transform -translate-x-1/2 bg-[#F3FE00] transition-all duration-500 ease-in-out
+                          className={`absolute left-1/2 bottom-0 h-px transform -translate-x-1/2 bg-[#F3FE00] transition-all duration-500 ease-in-out
                                      ${isServicesActive ? "w-6 opacity-100" : "w-0 opacity-0"}`}></span>
 
                       </Link>
@@ -90,7 +90,7 @@ export default function Header() {
                   ) : (
                     <Link
                       to={link.path}
-                      className={`relative px-4 py-2 font-[Poppins] text-[18px] leading-[27px] ${pathname === link.path ||
+                      className={`relative px-4 py-2 font-[Inter] text-[18px] leading-[27px] ${pathname === link.path ||
                         (pathname.includes(link.path) && link.path !== "/")
                         ? "text-[#F3FE00]"
                         : "text-[#FFFFFF]"

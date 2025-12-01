@@ -1,5 +1,5 @@
 import Button from "../../common/button";
-import Heading from "../../common/headings"
+import Heading from "../../common/Sec-headings"
 import Mainheading from "../../common/mainheading";
 
 import Icon from "../../../assets/svg/strategy-icon.svg"

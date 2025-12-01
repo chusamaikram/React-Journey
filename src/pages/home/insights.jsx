@@ -38,7 +38,7 @@ export default function InsightsSection() {
                 <div className="container">
                     <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-4 sm:gap-auto">
                         <div className="max-w-[510px] flex flex-col items-center sm:items-start justify-start gap-4 sm:gap-8">
-                            <span className="text-sm text-[#F3FE00] font-[Geologica] uppercase">Our Insights</span>
+                            <span className="text-sm text-[#F3FE00] font-[Inter] uppercase">Our Insights</span>
                             <h2 className="text-[28px] sm:text-[40px] text-center sm:text-start font-bold leading-[40px] sm:leading-[44px] font-[Geologica]">Insights That Inspire Vision Forward</h2>
                         </div>
                         <div>
@@ -58,7 +58,7 @@ export default function InsightsSection() {
                                 <div className="h-full p-6 flex flex-col items-start">
                                     <span className="hidden sm:block text-[12px] font-[Inter] text-white">ZeeFrames</span>
                                     <div className="flex flex-col items-start gap-2 py-5">
-                                        <h3 className="text-[20px] sm:text-[24px] line-clamp-3 font-medium font-[Poppins] text-white"> {item.title}</h3>
+                                        <h3 className="text-[20px] sm:text-[24px] line-clamp-3 font-medium  text-white"> {item.title}</h3>
                                         <p className="text-base line-clamp-2 leading-[24px]">{item.desc}</p>
                                     </div>
                                     <div className="flex items-center gap-2 text-[12px] font-[Inter]">

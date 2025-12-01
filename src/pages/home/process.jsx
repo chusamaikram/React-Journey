@@ -1,4 +1,4 @@
-import Headings from "../../components/common/headings";
+import Headings from "../../components/common/Sec-headings";
 import ProcessCard from "../../components/processCards";
 import process1 from "../../assets/images/process-1.webp"
 import process2 from "../../assets/images/process-2.webp"

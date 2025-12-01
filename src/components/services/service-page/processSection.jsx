@@ -1,4 +1,4 @@
-import Heading from "../../common/headings";
+import Heading from "../../common/Sec-headings";
 import { Digit1, Digit2, Digit3, Digit4 } from "../../../assets/svg/index"
 
 export default function ProcessSection({ heading, ProcessCards }) {

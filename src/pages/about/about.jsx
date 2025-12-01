@@ -1,6 +1,6 @@
 import image from "../../assets/images/about-photo.png"
 import { ClientIcon, TeamIcon, TestimonialIcon } from "../../assets/svg"
-import Heading from "../../components/common/headings"
+import Heading from "../../components/common/Sec-headings"
 export default function AboutSection() {
 
     const AboutCards = [

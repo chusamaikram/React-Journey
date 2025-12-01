@@ -1,4 +1,4 @@
-import Heading from '../../components/common/headings'
+import Heading from '../../components/common/Sec-headings'
 import ServiceCard from './service-cards'
 
 

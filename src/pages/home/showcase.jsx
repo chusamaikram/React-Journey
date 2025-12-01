@@ -1,5 +1,5 @@
 
-import Headings from "../../components/common/headings"
+import Headings from "../../components/common/Sec-headings"
 import Button from "../../components/common/button"
 import { Link } from "react-router-dom"
 import ShowcaseCard from "./showcase-card"

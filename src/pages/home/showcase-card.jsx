@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+
 import { SmartMoney, forecast, effortless, ConnectBryond, style, SmartShipping } from "../../assets/images"
 
 
@@ -52,7 +52,7 @@ export default function ShowcaseCard() {
         <>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 row-gap-12">
                 {CardsData.map(item => (
-                    <Link to={item.path} key={item.id} className={`${item.id % 2 === 0 ? 'sm:mt-[120px]' : 'mt-0'}`} aria-label="work navigation" >
+                    <div  key={item.id} className={`${item.id % 2 === 0 ? 'sm:mt-[120px]' : 'mt-0'}`} >
                         <div className="w-full flex flex-col items-start justify-center gap-8">
                             <div className="overflow-hidden">
                                 <img className="max-w-full h-full object-cover rounded-6" src={item.img} alt={item.title} loading="lazy"
@@ -61,12 +61,12 @@ export default function ShowcaseCard() {
                                 />
                             </div>
 
-                            <div className="flex flex-col items-start gap-2.5 font-['Inter_Tight'] ">
-                                <h3 className="text-[28px] font-semibold ">{item.title}</h3>
+                            <div className="flex flex-col items-start gap-2.5">
+                                <h3 className="text-[28px] font-semibold font-[Geologica] ">{item.title}</h3>
                                 <p className="text-base leading-[25px] " >{item.desc}</p>
                             </div>
                         </div>
-                    </Link>
+                    </div>
                 ))}
             </div>
 

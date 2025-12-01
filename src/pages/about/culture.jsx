@@ -1,4 +1,4 @@
-import Heading from "../../components/common/headings";
+import Heading from "../../components/common/Sec-headings";
 import member1 from "../../assets/images/member1.png";
 import member2 from "../../assets/images/member2.png";
 import member3 from "../../assets/images/member3.png";

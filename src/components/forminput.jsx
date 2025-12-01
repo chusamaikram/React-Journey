@@ -13,7 +13,7 @@ export default function InputField({
     return (
         <>
             <input
-                className={`relative z-20 w-full px-4 h-[44px] bg-[#171717] border ${borderColor} focus:border-[#F3FE00] rounded-[8px] text-[#B9B9B9] text-sm font-medium font-['Inter_Tight'] outline-none`}
+                className={`relative z-20 w-full px-4 h-[44px] bg-[#171717] border ${borderColor} focus:border-[#F3FE00] rounded-[8px] text-[#B9B9B9] text-sm font-medium font-[Inter] outline-none`}
                 type={type}
                 name={name}
                 placeholder={placeholder}

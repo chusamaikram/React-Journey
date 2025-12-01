@@ -114,13 +114,13 @@ export default function Footer() {
                         </div>
                         {FooterLinks.map(item => (
                             <div key={item.id}
-                                className=" flex flex-col items-start gap-5 font-['Inter_Tight']">
+                                className=" flex flex-col items-start gap-5 font-['Inter']">
                                 <h2 className="text-base font-semibold leading-[20px] text-[#FFFFFF]">{item.title}</h2>
                                 <ul className="flex flex-col items-start gap-3.5">
                                     {item.links.map((link, i) => (
                                         <li key={i} className="" >
                                             <Link
-                                                className="text-[15px] leading-[20px] text-[#8F8F8F] hover:text-[#FFFFFF] font-[Inter Tight]"
+                                                className="text-[15px] leading-[20px] text-[#8F8F8F] hover:text-[#FFFFFF] font-[Inter]"
                                                 to={link.path}>
                                                 {link.title}
                                             </Link>
@@ -134,14 +134,14 @@ export default function Footer() {
                     <div className="grid sm:grid-cols-4 items-start gap-4 p-6 bg-[#1A1A1A]">
                         {Address.map(item => (
                             <div key={item.id}
-                                className="flex flex-col items-start gap-[6px] p-5 font-['Inter_Tight'] " >
+                                className="flex flex-col items-start gap-[6px] p-5 font-['Inter'] " >
                                 <img src={item.img} alt={item.title}
                                     width={32}
                                     height={24}
                                 />
-                                <h3 className="mt-[6px] text-[24px] font-medium font-[Inter Tight] text-[#FFFFFF]">{item.title}</h3>
-                                <a href={item.addresslink} className="text-[14px] leading-[22px] font-[Inter Tight] text-[#8E8E8E]" aria-label="address link" target="_blank">{item.address}</a>
-                                <a href={`tel:${item.phone}`} className="text-sm leading-[20px] font-medium font-[Inter Tight] text-[#E1E1E1]" aria-label="contact number">{item.phone}</a>
+                                <h3 className="mt-[6px] text-[24px] font-medium font-[Inter] text-[#FFFFFF]">{item.title}</h3>
+                                <a href={item.addresslink} className="text-[14px] leading-[22px] font-[Inter] text-[#8E8E8E]" aria-label="address link" target="_blank">{item.address}</a>
+                                <a href={`tel:${item.phone}`} className="text-sm leading-[20px] font-medium font-[Inter] text-[#E1E1E1]" aria-label="contact number">{item.phone}</a>
                             </div>
                         ))}
 
