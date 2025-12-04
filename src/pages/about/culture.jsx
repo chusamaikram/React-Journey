@@ -120,7 +120,7 @@ export default function CultureSection() {
                                         <h2 className="text-[28px] sm:text-[32px] font-[200] font-[Geologica] leading-normal" >{item.title}</h2>
                                     </div>
                                     <div className="md:w-[424px]">
-                                        <p className=" text-sm leading-[21px]"> {item.desc}</p>
+                                        <p className=" text-sm leading-[21px] text_gray_495"> {item.desc}</p>
                                     </div>
 
                                 </li>

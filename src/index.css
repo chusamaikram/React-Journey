@@ -1,4 +1,3 @@
-
 @import "tailwindcss";
 
 
@@ -7,7 +6,7 @@
 }
 
 body {
-  font-family: 'Inter', 'Geologica', sans-serif;
+  font-family: 'Inter','Geologica',sans-serif;
   background-color: #0B0B0B;
   color: white;
 }
@@ -16,6 +15,10 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 80px;
+}
+
+.text_gray_495 {
+  color: #D5D5D5;
 }
 
 .slide-track {
@@ -61,6 +64,7 @@ body {
     display: none;
   }
 }
+
 /* 
 .floating_btn {
   position: fixed;

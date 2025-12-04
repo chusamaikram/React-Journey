@@ -107,8 +107,8 @@ export default function TrendingArticle() {
                                         </div>
                                         <div className="h-full  p-4 sm:p-[16px_16px_16px_28px]  bg-white/8  rounded-[0_0_12px_12px] sm:rounded-[0_12px_12px_0] flex flex-col items-start gap-3">
                                             <h3 className="text-[19px] font-[Geologica] font-semibold leading-[normal] ">{card.title}</h3>
-                                            <p className="text-[14px] font-[Inter] leading-[21px] line-clamp-2 ">{card.desc}</p>
-                                            <div className="flex items-center gap-2 font-[Inter] text-[12px] mt-3">
+                                            <p className="text-[14px] font-[Inter] leading-[21px] text_gray_495 line-clamp-2 ">{card.desc}</p>
+                                            <div className="flex items-center gap-2 font-[Inter] text_gray_495 text-[12px] mt-3">
                                                 <span >{card.readtime} min read</span>
                                                 <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
                                                 <time datetime={card.date}>{card.date}</time>

@@ -7,7 +7,7 @@ export default function WhySection({ heading, StrategyListing }) {
                 <div className="container">
                     <div className=" grid grid-cols-1 md:[grid-template-columns:minmax(100px,659px)_minmax(100px,502px)] gap-20">
                         <div className="flex flex-col items-start gap-6">
-                            <h2 className="text-[28px] sm:text-[40px] leading-[40px] sm:leading-[48px] font-bold font-[Geologica]">{heading}</h2>
+                            <h2 className="text-[28px] sm:text-[40px] leading-[40px] sm:leading-[40px] font-bold font-[Geologica]">{heading}</h2>
                             <ul className="flex flex-col items-start gap-3">
                                 {StrategyListing.map((item, index) => (
 
@@ -20,8 +20,8 @@ export default function WhySection({ heading, StrategyListing }) {
                                                 </svg>
                                             </div>
                                             <div className="flex flex-col items-start gap-2">
-                                                <h3 className="text-base leading-[21px] font-semibold">{item.title}</h3>
-                                                <p className="text-sm leading-[20px] text-[#DCDCDC]"> {item.desc}</p>
+                                                <h3 className="text-base leading-[21px] font-[Geologica] font-semibold">{item.title}</h3>
+                                                <p className="text-sm leading-[20px] text_gray_495"> {item.desc}</p>
                                             </div>
 
 

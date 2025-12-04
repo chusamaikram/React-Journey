@@ -26,8 +26,8 @@ export default function Home() {
                 <div className="container">
                     <div className="flex flex-wrap md:flex-nowrap items-center justify-between  ">
                         <div className=" max-w-[717px] flex flex-col items-start  justify-between gap-4">
-                            <h2 className="text-[28px] sm:text-[70px] font-bold leading-[42px] sm:leading-[96px] font-[Geologica]">Design That Thinks. Interfaces That Feel.</h2>
-                            <p className="max-w-[665px] text-base sm:text-lg leading-[25px] sm:leading-[30px] font-[Inter]">At ZeeFrames, we craft AI-ready design systems for modern software responsive, scalable, and human-centered.</p>
+                            <h2 className="text-[28px] sm:text-[70px] font-bold leading-[42px] sm:leading-[85px] font-[Geologica]">Design That Thinks. Interfaces That Feel.</h2>
+                            <p className="max-w-[665px] text-base sm:text-lg text-[#d5d5d5] leading-[25px] sm:leading-[30px] font-[Inter]">At ZeeFrames, we craft AI-ready design systems for modern software responsive, scalable, and human-centered.</p>
                             <Button
                                 path="/contact"
                                 className="mt-5 bg-[#F3FE00] text-[#000] hover:bg-transparent hover:text-[#F3FE00] border border-[#F3FE00] "

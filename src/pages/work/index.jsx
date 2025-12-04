@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Button from "../../components/common/button";
 import Mainheading from "../../components/common/mainheading";
 import ShowcaseCard from "../home/showcase-card";
 import ContactUs from "../home/contact-us";
 import useTitle from "../../components/common/page-title";
+import ExternalLink from "../../components/common/External-link";
 
 export default function Work() {
 
@@ -57,14 +57,15 @@ export default function Work() {
 
                             <Mainheading className="max-w-[774px]" text="We’re Proud of What We’ve Built." />
                             <p
-                                className='text-base sm:text-lg text-center leading-[27px] max-w-[571px] text-center font-[Inter] capitalize'>
+                                className='text-base sm:text-lg leading-[27px] max-w-[571px] text-center font-[Inter] capitalize'>
                                 No matter the industry you're in, or the asset you need, we can design it for you</p>
 
                             <div className='mt-5'>
-                                <Button
-                                    path="/contact"
+                                <ExternalLink
+                                    path="https://calendly.com/contact-zeeframes/30min?month=2025-12"
+                                    className="mt-5  hover:text-[#F3FE00] border hover:border-[#F3FE00] "
                                     defaulttext="Schedule Call"
-                                    disableHover={true}
+                                    hovertext="Book a Demo"
                                     showicon={false}
                                 />
 

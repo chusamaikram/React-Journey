@@ -24,7 +24,7 @@ export default function ProcessSection({ heading, ProcessCards }) {
 
                                 </div>
                                 <div>
-                                    <h3 className="text-lg leading-[21px] font-medium text-white group-hover:text-black">{item.title}</h3>
+                                    <h3 className="text-lg leading-[21px] font-[Geologica] font-medium text-white group-hover:text-black">{item.title}</h3>
                                     <p className="mt-4  text-sm leading-[21px] text-[#BDBDBD] group-hover:text-black">{item.desc}</p>
                                 </div>
                             </div>

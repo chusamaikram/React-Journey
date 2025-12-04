@@ -45,7 +45,7 @@ export default function AboutSection() {
                                         {card.icon}
                                         <div>
                                             <h3 className="text-lg leading-[30px] font-[Geologica]">{card.title}</h3>
-                                            <p className= "mt-2 text-sm leading-[21px] font-[Plus Jakarta Sans] text-[#DEDEDE] text-start ">{card.desc}</p>
+                                            <p className= "mt-2 text-sm leading-[21px] text_gray_495 text-start ">{card.desc}</p>
                                         </div>
 
                                     </div>

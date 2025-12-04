@@ -110,7 +110,7 @@ export default function Footer() {
                         height={47} />
                     <div className="pt-8 pb-8.5 grid grid-cols-2 md:grid-cols-[minmax(200px,1fr)_minmax(110px,216px)_minmax(110px,216px)_minmax(110px,216px)] items-start gap-12">
                         <div className="col-span-2 md:col-span-1" >
-                            <p className="text-lg leading-[27px] text-left text-[#BDBDBD] font-[Inter]">We transform ideas into user-centered digital experiences for businesses worldwide, from Fortune 500s to startups, using Figma, Webflow, and no-code solutions.</p>
+                            <p className="text-lg leading-[27px] text-left text_gray_495 font-[Inter]">We transform ideas into user-centered digital experiences for businesses worldwide, from Fortune 500s to startups, using Figma, Webflow, and no-code solutions.</p>
                         </div>
                         {FooterLinks.map(item => (
                             <div key={item.id}

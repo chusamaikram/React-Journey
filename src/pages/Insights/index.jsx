@@ -54,8 +54,8 @@ export default function Insights() {
 
                         <div className="flex flex-col items-start gap-3">
                             <h2 className="text-[28px] sm:text-[48px] font-[Geologica] leading-[normal] font-semibold w-full">How Thinking Like a Product Designer Changed My Design Handoffs</h2>
-                            <p className="text-sm sm:text-base leading-[21px] sm:leading-[30px] font-[Inter]">Five lessons I’ve learned about deliverables that Junior Designer Me could’ve never imagined.</p>
-                            <div className="mt-3 flex items-center gap-2">
+                            <p className="text-sm sm:text-base leading-[21px] sm:leading-[30px] text_gray_495 font-[Inter]">Five lessons I’ve learned about deliverables that Junior Designer Me could’ve never imagined.</p>
+                            <div className="mt-3 flex items-center text_gray_495 text-sm leading-[normal] gap-2">
                                 <span >7 min read</span>
                                 <span className="w-[6px] h-[6px] bg-white rounded-full"></span>
                                 <time dateTime="Jan 23, 2025">Jan 23, 2025</time>

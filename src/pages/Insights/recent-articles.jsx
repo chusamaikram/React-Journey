@@ -22,8 +22,8 @@ const RecentBlog = ({ title, desc, path, className, img, readtime, date }) => {
                     <div className="p-6 border border-white/20 w-full bg-white/8  rounded-[0_0_16px_16px]">
                         <div className="  flex flex-col items-start gap-3">
                             <h3 className="text-[19px] font-[Geologica] font-semibold leading-[normal] ">{title}</h3>
-                            <p className="text-base font-[Inter] leading-[25px] line-clamp-2 ">{desc}</p>
-                            <div className="flex items-center gap-2 font-[Inter] text-[12px] mt-3">
+                            <p className="text-base font-[Inter] text_gray_495 leading-[25px] line-clamp-2 ">{desc}</p>
+                            <div className="flex items-center gap-2 font-[Inter] text_gray_495 text-[12px] mt-3">
                                 <span >{readtime} min read</span>
                                 <div className="w-[6px] h-[6px] bg-white rounded-full"></div>
                                 <time datetime={date}>{date}</time>

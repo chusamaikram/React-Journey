@@ -1,9 +1,8 @@
 import { ArrowIconMini, Clutch, Dribble, Webflow } from '../../assets/svg';
-import Button from '../../components/common/button';
 import America from "../../assets/images/flag1.png"
 import Europe from "../../assets/images/flag2.png"
 import verified from "../../assets/images/verified.png"
-import AboutBg from "../../assets/images/about-bg.png"
+import AboutBg from "../../assets/images/about-bg.webp"
 
 import AboutSection from './about';
 import Mission from './mission';
@@ -13,6 +12,7 @@ import Mainheading from '../../components/common/mainheading';
 import TeamSection from './team';
 import RatingsSection from './ratings';
 import useTitle from '../../components/common/page-title';
+import ExternalLink from '../../components/common/External-link';
 
 export default function AboutUs() {
 
@@ -64,14 +64,15 @@ export default function AboutUs() {
 
                             <Mainheading className="max-w-[774px]"
                                 text="Elite Design Partners" />
-                            <p className='text-base sm:text-lg text-center leading-[27px] max-w-[774px] font-[Inter] capitalize'>We are the best product design agency for startups. We excel in UI/UX design, branding, web development & committed to 100% satisfaction with every project.</p>
+                            <p className='text-base text_gray_495 sm:text-lg text-center leading-[27px] max-w-[774px] font-[Inter] capitalize'>We are the best product design agency for startups. We excel in UI/UX design, branding, web development & committed to 100% satisfaction with every project.</p>
 
                             <div className='mt-5'>
-
-                                <Button
+                                <ExternalLink
+                                    path="https://calendly.com/contact-zeeframes/30min?month=2025-12"
                                     defaulttext="Request a Proposal Today"
+                                    className="mt-5  hover:text-[#F3FE00] border hover:border-[#F3FE00] "
                                     showicon={false}
-                                    disableHover={true}
+                                    hovertext="Book a Demo"
                                 />
                             </div>
 
@@ -79,7 +80,7 @@ export default function AboutUs() {
                         <div className='mt-8 sm:mt-16 flex flex-wrap items-center justify-center gap-4 '>
                             {HomeCards.map((Items, index) => (
                                 <div key={index} className='w-full sm:w-auto px-3 sm:px-5 py-3  bg-[#191919] border border-[#303030] rounded-[16px] flex flex-row sm:flex-col items-center gap-3 sm:gap-4'>
-                                    <h3 className='text-base sm:text-lg font-semibold leading-[21px] font-[Inter] flex items-center gap-2.5'>
+                                    <h3 className='text-base sm:text-lg font-semibold leading-[21px] font-[Geologica] flex items-center gap-2.5'>
                                         {Items.heading}
                                         {index == 1 && (<div className='flex items-center gap-1.5'>
                                             <img src={Items.flag1} alt="flag icon" width={22} height={16} />

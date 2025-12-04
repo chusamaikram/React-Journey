@@ -1,7 +1,8 @@
-import Button from "../../components/common/button";
+
 import { PlusIcon, MinusIcon } from "../../assets/svg"
 import ClutchRatings from "../../assets/svg/clutch-ratings.svg"
 import { useState } from "react";
+import ExternalLink from "../../components/common/External-link";
 
 
 export default function FaqSection() {
@@ -56,13 +57,12 @@ export default function FaqSection() {
 
                             <div className="flex items-start justify-between gap-8">
                                 <div className="w-[220px]">
-                                    <Button
+                                    <ExternalLink
+                                        path="https://calendly.com/contact-zeeframes/30min?month=2025-12"
                                         className="w-full text-black bg-white hover:bg-transparent hover:text-[#F3FE00] border border-white hover:border-[#F3FE00]"
-                                        path='/contact'
-                                        hovertext="Let's Talk "
+                                        hovertext="Let's talk"
                                         defaulttext="Book a free call"
                                         showicon={true}
-
                                     />
                                 </div>
 
@@ -75,7 +75,7 @@ export default function FaqSection() {
                             {FaqCards.map((item, index) => (
                                 <div key={index} className={` w-full p-5  bg-[rgba(255, 255, 255, 0.04)] border  transition-all duration-500 ${activeIndex === index ? "border-[#F3FE00]" : "border-[#3C3C3C]"}  rounded-[12px]`}>
                                     <button className=" w-full bg-transparent border-none cursor-pointer flex items-center justify-between" onClick={() => handletogle(index)} aria-label="accordian btn">
-                                        <span className="flex-grow text-base font-medium text-white text-start"> {item.question}</span>
+                                        <span className="grow text-base font-[Geologica] font-medium text-white text-start"> {item.question}</span>
                                         <span className={`w-[24px] h-[24px] border  rounded-[6px]  ${activeIndex === index ? "border-[#F3FE00] bg-[#F3FE00]" : "border-[#3C3C3C] bg-[#3C3C3C]"}  p-1`}>
                                             {activeIndex === index ?
                                                 <PlusIcon /> : <MinusIcon />

@@ -5,11 +5,12 @@ import Mainheading from "../../common/mainheading";
 import Icon from "../../../assets/svg/strategy-icon.svg"
 import Star from "../../../assets/svg/hero-star.svg"
 
-import strategyThumbnail from "../../../assets/images/strategy-img.png"
+import strategyThumbnail from "../../../assets/images/service-placeholder.webp"
 import ProcessSection from "./processSection";
 
 import ContactUs from "../../../pages/home/contact-us";
 import WhySection from "./whySection";
+import ExternalLink from "../../common/External-link";
 
 export default function ServicePage({
     main_heading,
@@ -34,14 +35,15 @@ export default function ServicePage({
                         <div className='flex flex-col items-center justify-center gap-3'>
                             <Mainheading className="max-w-[774px]" text={main_heading} />
                             <p
-                                className=' text-base sm:text-lg text-center leading-[27px] max-w-[679px] text-center font-[Inter] capitalize'>
+                                className=' text-base sm:text-lg leading-[27px] max-w-[679px] text-center text_gray_495 font-[Inter] capitalize'>
                                 {hero_desc}</p>
 
                             <div className='mt-5'>
-                                <Button
-                                    path="/contact"
+                                <ExternalLink
+                                    path="https://calendly.com/contact-zeeframes/30min?month=2025-12"
+                                    className="mt-5  hover:text-[#F3FE00] border hover:border-[#F3FE00] "
                                     defaulttext="Book a Free Call"
-                                    disableHover={true}
+                                    hovertext="Book a Demo"
                                     showicon={false}
                                 />
 
@@ -74,7 +76,7 @@ export default function ServicePage({
                                         <div className="w-[24px] h-[24px] p-[5px] flex items-center justify-center ">
                                             <img className="w-full h-full" src={Icon} alt="strategy icon" width={14} />
                                         </div>
-                                        <p className="text-[12px] leading-[21px] font-medium">{item.title}</p>
+                                        <p className="text-sm leading-[21px] font-medium">{item.title}</p>
                                     </li>
                                 ))}
 

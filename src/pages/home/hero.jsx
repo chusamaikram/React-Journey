@@ -6,6 +6,7 @@ import { adiqat, cisco, nissan, repurpose, trafilea, walmart, yallamotor } from 
 import Button from "../../components/common/button";
 
 import { Bdot, Diamond, FigmaIcon, StarIcon1, StarIcon2, Wicon, XD } from "../../assets/svg";
+import ExternalLink from "../../components/common/External-link";
 
 export default function HeroSection() {
     const Startups = [
@@ -132,12 +133,12 @@ export default function HeroSection() {
                 <div className="container">
                     <div className="relative ">
 
-                        <img className="absolute z-0 top-0 -left-[65px] hidden sm:block blur-[15px]" src={bg1} width={649} height={789}  aria-hidden="true" loading="lazy" />
+                        <img className="absolute z-0 top-0 -left-[65px] hidden sm:block blur-[15px]" src={bg1} width={649} height={789} aria-hidden="true" loading="lazy" />
                         <img className="hidden sm:block  absolute z-0 top-[150px] sm:top-0 -left-[20px] sm:left-[65px] " src={bg2} width={435} height={429} aria-hidden="true" loading="lazy" />
                         <img className="absolute z-0 -top-[15px] -right-[60px] blur-[15px] hidden sm:block opacity-[0.8]" src={bg3} width={673} height={606} aria-hidden="true" loading="lazy" />
                         <StarIcon1 />
                         <StarIcon2 />
-    
+
                         <div className="absolute z-10 top-0 left-0">
                             <div className="above-glow mx-auto w-fit sm:w-[600px] mt-8 sm:mt-12 mx-auto bg-[#0B0B0B] rounded-[8px] border border-[rgba(60,60,60,0.4)] flex flex-col sm:flex-row items-start sm:items-center justify-center gap-5 p-2">
                                 <div className="flex items-center gap-3">
@@ -173,14 +174,17 @@ export default function HeroSection() {
 
                             </div>
                             <div className=" above-glow flex items-center justify-center gap-[20px]">
-                                <Button
-                                    path="/contact" hovertext={" Let's talk 🤙"} defaulttext={"Schedule Call"}
+                                <ExternalLink
+                                    path="https://calendly.com/contact-zeeframes/30min?month=2025-12"
                                     className=" h-[48px] bg-white border border-white text-[#0B0B0B]  font-[Plus Jakarta Sans] leading-none "
+                                    hovertext={" Let's talk 🤙"}
+                                    defaulttext={"Schedule Call"}
                                     showicon={false}
                                 />
-                                <Button
-                                    path="/work" target="_blank" hovertext={" Open "} defaulttext={"©2025 Work"}
+                                <ExternalLink
+                                    path="https://www.figma.com/proto/ZVnmWStSNFPShPBIOzXAqN/Sample-Work---Products?node-id=187190-11767&p=f&t=ljXD3DpgiMiJKe8T-0&scaling=scale-down&content-scaling=fixed&page-id=187190%3A11766"
                                     className=" h-[48px] bg-black border border-white font-[Inter] hover:border-[#F3FE00] "
+                                    hovertext={" Open "} defaulttext={"©2025 Work"}
                                     showicon={false}
                                 />
                             </div>

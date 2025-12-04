@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowIcon } from "../../assets/svg";
 import { insight1, insight2, insight3 } from "../../assets/images";
+import Button from "../../components/common/button";
 
 export default function InsightsSection() {
     const InsightCards = [
@@ -42,10 +43,17 @@ export default function InsightsSection() {
                             <h2 className="text-[28px] sm:text-[40px] text-center sm:text-start font-bold leading-[40px] sm:leading-[44px] font-[Geologica]">Insights That Inspire Vision Forward</h2>
                         </div>
                         <div>
-                            <Link to="/insights" className="h-[48px] flex items-center justify-between p-5 rounded-full bg-white text-black text-base font-semibold leading-[24px] font-[Inter]" aria-label="insight link" >
+                            {/* <Link to="/insights" className="h-[48px] flex items-center justify-between p-5 rounded-full bg-white text-black text-base font-semibold leading-[24px] font-[Inter]" aria-label="insight link" >
                                 Explore More
                                 <ArrowIcon />
-                            </Link>
+                            </Link> */}
+                            <Button
+                            defaulttext="Explore More"
+                            hovertext="See more "
+                            className="bg-white text-black hover:bg-black hover:text-[#F3FE00] border hover:border-[#F3FE00]"
+                            showicon={true}
+                            path="/insights"
+                            />
                         </div>
                     </div>
                     <div className="pt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 items-start">
@@ -56,12 +64,11 @@ export default function InsightsSection() {
                                 </div>
 
                                 <div className="h-full p-6 flex flex-col items-start">
-                                    <span className="hidden sm:block text-[12px] font-[Inter] text-white">ZeeFrames</span>
-                                    <div className="flex flex-col items-start gap-2 py-5">
-                                        <h3 className="text-[20px] sm:text-[24px] line-clamp-3 font-medium  text-white"> {item.title}</h3>
-                                        <p className="text-base line-clamp-2 leading-[24px]">{item.desc}</p>
+                                    <div className="flex flex-col items-start gap-2">
+                                        <h3 className="text-[20px] sm:text-[24px] font-[Geologica] line-clamp-3 font-medium  text-white"> {item.title}</h3>
+                                        <p className="text-base line-clamp-2 text_gray_495 leading-[24px]">{item.desc}</p>
                                     </div>
-                                    <div className="flex items-center gap-2 text-[12px] font-[Inter]">
+                                    <div className="flex pt-5 items-center gap-2 text_gray_495 text-[12px] font-[Inter]">
                                         <span >{item.timerequire}</span>
                                         <span className="w-[6px] h-[6px] bg-white rounded-full"></span>
                                         <time dateTime={item.date}>{item.date}</time>
