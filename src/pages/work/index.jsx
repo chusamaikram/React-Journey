@@ -63,7 +63,7 @@ export default function Work() {
                             <div className='mt-5'>
                                 <ExternalLink
                                     path="https://calendly.com/contact-zeeframes/30min?month=2025-12"
-                                    className="mt-5  hover:text-[#F3FE00] border hover:border-[#F3FE00] "
+                                    className="mt-5 hover:text-[#F3FE00] border hover:border-[#F3FE00] "
                                     defaulttext="Schedule Call"
                                     hovertext="Book a Demo"
                                     showicon={false}

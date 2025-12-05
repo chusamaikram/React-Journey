@@ -16,7 +16,7 @@ const SignupSchema = Yup.object({
     message: Yup.string().required("Message is required"),
 });
 
-export default function ContactUs({border_color="border-[#F3FE00]" , radius="rounded-full"}) {
+export default function ContactUs({ border_color = "border-[#F3FE00]", radius = "rounded-full" }) {
 
     const Checks = ["You'll hear from us within one business day.",
         "Our team will gather your project details and put together a clear brief.",
@@ -106,7 +106,7 @@ export default function ContactUs({border_color="border-[#F3FE00]" , radius="rou
                                 {Reviews.map(item => (
                                     <li key={item.id}>
                                         <a href={item.path} target="blank" aria-label={item.name}>
-                                            <img src={item.logo} alt={item.name}  />
+                                            <img src={item.logo} alt={item.name} />
                                         </a>
 
                                     </li>
@@ -218,7 +218,8 @@ export default function ContactUs({border_color="border-[#F3FE00]" , radius="rou
                                         </div>
 
                                         <button type="submit" disabled={isSubmitting}
-                                            className={`cursor-pointer px-5.5 py-3.5 my-1 bg-[#242323] border ${border_color} ${radius}  w-full flex items-center justify-center text-base font-semibold leading-[21px] text-white font-[Inter] ${isSubmitting ? "opacity-70 cursor-not-allowed" : ""}`}>  {isSubmitting ? "Submitting..." : "Submit Inquiry"}</button>
+                                            className={`cursor-pointer px-5.5 py-3.5 my-1 bg-linear-to-r hover:from-lime-300 hover:to-green-400 transition duration-300" border ${border_color} ${radius}  w-full flex items-center justify-center text-base font-semibold leading-[21px] text-white font-[Inter] ${isSubmitting ? "opacity-70 cursor-not-allowed" : ""}`}>  {isSubmitting ? "Submitting..." : "Submit Inquiry"}
+                                        </button>
                                         <div className="font-[Inter] flex flex-col items-start gap-2">
                                             <p className="text-sm text-[#F2F2F2]">Hate contact forms? Direct Contact.</p>
                                             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">

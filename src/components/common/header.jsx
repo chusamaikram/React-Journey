@@ -105,7 +105,7 @@ export default function Header() {
               ))}
 
               <Button
-                onClick={() => setIsMenuOpen(false)}
+                onclick="() => setIsMenuOpen(false)"
                 path="/contact"
                 hovertext={" Let's talk"}
                 defaulttext={"Work with us"}

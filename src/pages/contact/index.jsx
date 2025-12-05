@@ -1,3 +1,4 @@
+import ExternalLink from "../../components/common/External-link";
 import Button from "../../components/common/button";
 import Mainheading from "../../components/common/mainheading";
 import useTitle from "../../components/common/page-title";
@@ -27,10 +28,11 @@ export default function ContactPage() {
                                 No matter the industry you’re in, or the asset you need, we can design it for you </p>
 
                             <div className='mt-5'>
-                                <Button
-                                    path="/work"
+                                <ExternalLink
+                                    path="https://calendly.com/contact-zeeframes/30min?month=2025-12"
+                                    className="mt-5 hover:text-[#F3FE00] border hover:border-[#F3FE00] "
                                     defaulttext="Schedule Call"
-                                    disableHover={true}
+                                    hovertext="Book a Demo"
                                     showicon={false}
                                 />
 
