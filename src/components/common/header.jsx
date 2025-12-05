@@ -105,7 +105,7 @@ export default function Header() {
               ))}
 
               <Button
-                path="contact"
+                path="/contact"
                 hovertext={" Let's talk"}
                 defaulttext={"Work with us"}
                 className="flex sm:hidden w-[190px]  text-black border border-[#f3fe00] bg-[#f3fe00] hover:bg-black  hover:text-[#f3fe00]"
