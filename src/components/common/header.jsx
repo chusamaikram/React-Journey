@@ -105,6 +105,7 @@ export default function Header() {
               ))}
 
               <Button
+                onClick={toggleMobileView}
                 path="/contact"
                 hovertext={" Let's talk"}
                 defaulttext={"Work with us"}
